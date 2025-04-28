@@ -14,7 +14,7 @@ class EmployeeAttachmentsController extends Controller
     public function index($id)
     {
 
-        $employee = User::with('attachments')->findOrFail($id);
+        $employee = User::with('attachments')->latest()->findOrFail($id);
 
         if (Gate::allows('employees.attachments.index')) {
 

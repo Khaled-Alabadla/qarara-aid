@@ -47,7 +47,7 @@
                                     <label class="form-label">كلمة المرور الحالية</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input type="password" class="form-control" name="current_password">
+                                    <input type="password" autocomplete="new-password" class="form-control" name="current_password">
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                                     <label class="form-label">كلمة المرور الجديدة</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input type="password" class="form-control" name="new_password">
+                                    <input type="password" autocomplete="new-password" class="form-control" name="new_password">
                                 </div>
                             </div>
                         </div>

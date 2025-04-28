@@ -20,7 +20,7 @@ class AssistancesController extends Controller
     {
         Gate::authorize('assistances.index');
 
-        $assistances = Assistance::all();
+        $assistances = Assistance::latest()->get();
 
         $donors = Donor::all();
 
@@ -106,7 +106,7 @@ class AssistancesController extends Controller
     {
         Gate::authorize('assistances.show');
 
-        $assistance = Assistance::with('distributes')->findOrFail($id);
+        $assistance = Assistance::with('distributes')->latest()->findOrFail($id);
 
         return view('assistances.show', compact('assistance'));
     }
@@ -235,20 +235,11 @@ class AssistancesController extends Controller
         return redirect()->route('assistances.index')->with('success', 'تم الحذف بنجاح');
     }
 
-    public function special($id)
-    {
-        Gate::authorize('assistances.user');
-
-        $assistances = Assistance::where('id', $id)->get();
-
-        return view('assistances.special', compact('assistances'));
-    }
-
     public function trash()
     {
         Gate::authorize('assistances.trash');
 
-        $assistances = Assistance::onlyTrashed()->get();
+        $assistances = Assistance::onlyTrashed()->latest()->get();
 
         return view('assistances.trash', compact('assistances'));
     }
@@ -280,7 +271,7 @@ class AssistancesController extends Controller
 
         $user = User::findorFail($id);
 
-        $distributes = Distribution::with('assistance')->where('user_id', $id)->get();
+        $distributes = Distribution::with('assistance')->latest()->where('user_id', $id)->get();
 
         return view('assistances.user', compact('distributes', 'user'));
     }

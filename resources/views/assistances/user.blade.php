@@ -69,7 +69,7 @@
                         <table id="example" class="table key-buttons text-md-nowrap">
                             <thead>
                                 <tr>
-                                    {{-- <th class="border-bottom-0">#</th> --}}
+                                    <th class="border-bottom-0">#</th>
                                     <th class="border-bottom-0">نوع المساعدة</th>
                                     <th class="border-bottom-0"> الكمية</th>
                                     <th class="border-bottom-0"> الجهة المانحة</th>
@@ -80,6 +80,7 @@
                             <tbody>
                                 @foreach ($distributes as $distribute)
                                     <tr>
+                                        <td>{{ $loop->index + 1 }}</td>
                                         <td>{{ $distribute->assistance->type }}</td>
                                         <td>{{ $distribute->quantity }}</td>
                                         <td>{{ $distribute->donor->name }}</td>

@@ -15,7 +15,7 @@ class DonorsController extends Controller
     {
         Gate::authorize('donors.index');
 
-        $donors = Donor::all();
+        $donors = Donor::latest()->get();
 
         return view('donors.index', compact('donors'));
     }
@@ -114,7 +114,7 @@ class DonorsController extends Controller
     {
         Gate::authorize('donors.trash');
 
-        $donors = Donor::onlyTrashed()->get();
+        $donors = Donor::onlyTrashed()->latest()->get();
 
         return view('donors.trash', compact('donors'));
     }

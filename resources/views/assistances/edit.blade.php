@@ -130,6 +130,7 @@
                                     <label class="form-label">الموظفين المستلمين</label>
                                 </div>
                                 <div class="col-md-9">
+                                    
                                     @foreach ($employees as $employee)
                                         <div
                                             class="form-check d-flex align-items-center justify-content-between gap-3 mb-3 border-bottom pb-2">
@@ -172,42 +173,24 @@
     </div>
 @endsection
 @section('js')
-    <!--Internal  Chart.bundle js -->
-    <script src="{{ URL::asset('assets/plugins/chart.js/Chart.bundle.min.js') }}"></script>
-    <!-- Internal Select2.min js -->
-    <script src="{{ URL::asset('assets/plugins/select2/js/select2.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/select2.js') }}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <script src="https://cdn.tiny.cloud/1/te4yunma9fcbug72qq5me775md9rgobgyzvzdij8979oeowv/tinymce/7/tinymce.min.js"
-        referrerpolicy="origin"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea#myeditorinstance',
-            language: 'ar',
-            height: 300, // Replace this CSS selector to match the placeholder element for TinyMCE
-            plugins: 'code table lists',
-            toolbar: 'undo redo | blocks | bold italic | alignleft aligncenter alignright | indent outdent | bullist numlist | code | table'
-        });
-    </script>
-    <!--Internal  Datepicker js -->
-    <script src="{{ URL::asset('assets/plugins/jquery-ui/ui/widgets/datepicker.js') }}"></script>
-    <!--Internal  jquery.maskedinput js -->
-    <script src="{{ URL::asset('assets/plugins/jquery.maskedinput/jquery.maskedinput.js') }}"></script>
-    <!--Internal  spectrum-colorpicker js -->
-    <script src="{{ URL::asset('assets/plugins/spectrum-colorpicker/spectrum.js') }}"></script>
-    <!-- Internal Select2.min js -->
-    <script src="{{ URL::asset('assets/plugins/select2/js/select2.min.js') }}"></script>
-    <!--Internal Ion.rangeSlider.min js -->
-    {{-- <script src="{{URL::asset('assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js')}}"></script> --}}
-    <!--Internal  jquery-simple-datetimepicker js -->
-    {{-- <script src="{{URL::asset('assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js')}}"></script> --}}
-    <!-- Ionicons js -->
-    {{-- <script src="{{URL::asset('assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.js')}}"></script> --}}
-    <!--Internal  pickerjs js -->
-    {{-- <script src="{{URL::asset('assets/plugins/pickerjs/picker.min.js')}}"></script> --}}
-    <!-- Internal form-elements js -->
-    <script src="{{ URL::asset('assets/js/form-elements.js') }}"></script>
+      <!--Internal  Datepicker js -->
+      <script src="{{ URL::asset('assets/plugins/jquery-ui/ui/widgets/datepicker.js') }}"></script>
+      <!--Internal  jquery.maskedinput js -->
+      <script src="{{ URL::asset('assets/plugins/jquery.maskedinput/jquery.maskedinput.js') }}"></script>
+      <!--Internal  spectrum-colorpicker js -->
+      <script src="{{ URL::asset('assets/plugins/spectrum-colorpicker/spectrum.js') }}"></script>
+      <!-- Internal Select2.min js -->
+      <script src="{{ URL::asset('assets/plugins/select2/js/select2.min.js') }}"></script>
+      <!--Internal Ion.rangeSlider.min js -->
+      <script src="{{ URL::asset('assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js') }}"></script>
+      <!--Internal  jquery-simple-datetimepicker js -->
+      <script src="{{ URL::asset('assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js') }}"></script>
+      <!-- Ionicons js -->
+      <script src="{{ URL::asset('assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.js') }}"></script>
+      <!--Internal  pickerjs js -->
+      <script src="{{ URL::asset('assets/plugins/pickerjs/picker.min.js') }}"></script>
+      <!-- Internal form-elements js -->
+      <script src="{{ URL::asset('assets/js/form-elements.js') }}"></script>
     <script>
         let checkboxes = document.querySelectorAll('.employee-checkbox');
         checkboxes.forEach((checkbox) => {

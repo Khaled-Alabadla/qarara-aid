@@ -80,7 +80,7 @@
                         <table id="example" class="table key-buttons text-md-nowrap">
                             <thead>
                                 <tr>
-                                    {{-- <th class="border-bottom-0">#</th> --}}
+                                    <th class="border-bottom-0">#</th>
                                     <th class="border-bottom-0">الاسم</th>
                                     <th class="border-bottom-0">رقم التواصل</th>
                                     <th class="border-bottom-0">العنوان</th>
@@ -93,7 +93,7 @@
                             <tbody>
                                 @foreach ($donors as $donor)
                                     <tr>
-                                        {{-- <td>{{ $loop->index + 1 }}</td> --}}
+                                        <td>{{ $loop->index + 1 }}</td>
                                         <td>{{ $donor->name }}</td>
                                         <td>{{ $donor->phone }}</td>
                                         <td>{{ $donor->address }}</td>

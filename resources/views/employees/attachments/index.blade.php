@@ -2,13 +2,6 @@
 @section('title', 'عرض المرفقات')
 
 @section('css')
-    <!-- Internal Data table css -->
-    <link href="{{ URL::asset('assets/plugins/datatable/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/plugins/datatable/css/buttons.bootstrap4.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/plugins/datatable/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/plugins/datatable/css/jquery.dataTables.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/plugins/datatable/css/responsive.dataTables.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
 
 @endsection
 @section('page-header')
@@ -54,6 +47,7 @@
 
                             <thead>
                                 <tr>
+                                    <th class="border-bottom-0">#</th>
                                     <th class="border-bottom-0">اسم الملف</th>
                                     <th>العمليات</th>
                                 </tr>
@@ -62,6 +56,8 @@
                             <tbody>
                                 @foreach ($employee->attachments as $attachment)
                                     <tr>
+
+                                        <td>{{ $loop->index + 1 }}</td>
                                         <td>{{ $attachment->file_name }}</td>
                                         <td>
                                             <a href="{{ route('attachments.open', ['identity_number' => $attachment->user->identity_number, 'file_name' => $attachment->file_name]) }}"
@@ -69,7 +65,7 @@
                                                 عرض
                                             </a>
                                             <a href="{{ route('attachments.download', $attachment->id) }}"
-                                                class="btn btn-outline-succss btn-sm">تحميل</a>
+                                                class="btn btn-outline-success btn-sm">تحميل</a>
 
                                             @if (auth()->user()->can('employees.attachments.delete') ||
                                                     (auth()->user()->can('employees.employee.attachments.delete') && Auth::id() == $employee->id))
@@ -120,24 +116,6 @@
     <!-- main-content closed -->
 @endsection
 @section('js')
-    <!-- Internal Data tables -->
-    <script src="{{ URL::asset('assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.responsive.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/responsive.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/jquery.dataTables.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.bootstrap4.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.buttons.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/buttons.bootstrap4.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/jszip.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/pdfmake.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/vfs_fonts.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/buttons.html5.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/buttons.print.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/buttons.colVis.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.responsive.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/responsive.bootstrap4.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/table-data.js') }}"></script>
 
     <script>
         // Function to hide alert after 5 seconds

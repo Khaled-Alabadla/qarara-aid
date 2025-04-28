@@ -68,7 +68,7 @@
                         <table id="example2" class="table key-buttons text-md-nowrap">
                             <thead>
                                 <tr>
-                                    {{-- <th class="border-bottom-0">#</th> --}}
+                                    <th class="border-bottom-0">#</th>
                                     <th class="border-bottom-0">نوع المساعدة</th>
                                     <th class="border-bottom-0"> الكمية</th>
                                     <th class="border-bottom-0"> الجهة المانحة</th>
@@ -81,7 +81,7 @@
                             <tbody>
                                 @foreach ($assistances as $assistance)
                                     <tr>
-                                        {{-- <td>{{ $loop->index + 1 }}</td> --}}
+                                        <td>{{ $loop->index + 1 }}</td>
                                         <td>{{ $assistance->type }}</td>
                                         <td>{{ $assistance->quantity }}</td>
                                         <td>{{ $assistance->donor->name }}</td>

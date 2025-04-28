@@ -15,10 +15,4 @@ class NotificationsController extends Controller
         // Redirect to the assistance page
         return redirect()->route('assistances.user', Auth::id());
     }
-
-    public function markAllAsRead()
-    {
-        Auth::user()->unreadNotifications->markAsRead();
-        return redirect()->route('assistances.user', Auth::id()); // or any other route you prefer
-    }
 }

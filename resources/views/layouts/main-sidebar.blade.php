@@ -78,11 +78,11 @@
                     <ul class="slide-menu">
 
                         @can('roles.index')
-                            <li><a class="slide-item" href="{{ route('roles.index') }}">عرض قائمة الصلاحيات</a></li>
+                            <li><a class="slide-item" href="{{ route('dashboard.roles.index') }}">عرض قائمة الصلاحيات</a></li>
                         @endcan
 
                         @can('roles.create')
-                            <li><a class="slide-item" href="{{ route('roles.create') }}">إضافة صلاحية جديدة</a></li>
+                            <li><a class="slide-item" href="{{ route('dashboard.roles.create') }}">إضافة صلاحية جديدة</a></li>
                         @endcan
 
                         @can('roles.users.index')
@@ -108,7 +108,7 @@
                 </ul>
             </li>  --}}
 
-       
+
             @can('donors.display')
                 <li class="side-item side-item-category">الجهات المانحة</li>
                 <li class="slide">
@@ -173,9 +173,9 @@
                 <li class="slide">
                     <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
                         <i class="fa-solid fa-question"></i>
-                        
-                        
-                        
+
+
+
                         <span class="side-menu__label">الاستعلامات والتقارير</span><i
                             class="angle fe fe-chevron-down"></i></a>
                     <ul class="slide-menu">
