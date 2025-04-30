@@ -3,7 +3,7 @@
 
 @section('css')
     <!-- Internal Select2 css -->
-    <link href="{{ URL::asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet">
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
@@ -38,7 +38,7 @@
                     @endif
 
                     {{-- <div class="mb-4 main-content-label">Personal Information</div> --}}
-                    <form class="form-horizontal" action="{{ route('employees.reset_password_to_employee_verify' ) }}"
+                    <form class="form-horizontal" action="{{ route('employees.reset_password_to_employee_verify') }}"
                         method="POST">
                         @csrf
                         <div class="form-group ">
@@ -50,8 +50,9 @@
                                     <select class="form-control select2" name="employee_id">
                                         <option value=""></option>
                                         @foreach ($employees as $employee)
-                                            <option value="{{ $employee->id }}" data-employee-id="{{$employee->id }}"
-                                                {{ old('employee_id') == $employee->id ? 'selected' : '' }}>{{ $employee->name }}
+                                            <option value="{{ $employee->id }}" data-employee-id="{{ $employee->id }}"
+                                                {{ old('employee_id') == $employee->id ? 'selected' : '' }}>
+                                                {{ $employee->name }}
                                             </option>
                                         @endforeach
                                     </select>
@@ -90,10 +91,10 @@
 @endsection
 @section('js')
     <!--Internal  Chart.bundle js -->
-    <script src="{{ URL::asset('assets/plugins/chart.js/Chart.bundle.min.js') }}"></script>
+    <script src="/assets/plugins/chart.js/Chart.bundle.min.js"></script>
     <!-- Internal Select2.min js -->
-    <script src="{{ URL::asset('assets/plugins/select2/js/select2.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/select2.js') }}"></script>
+    <script src="/assets/plugins/select2/js/select2.min.js"></script>
+    <script src="/assets/js/select2.js"></script>
     <script>
         function hideAlert(id) {
             setTimeout(function() {
@@ -114,6 +115,6 @@
     </script>
 
     <script>
-       let $user_id = document.query
+        let $user_id = document.query
     </script>
 @endsection

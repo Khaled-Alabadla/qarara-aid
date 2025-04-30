@@ -3,7 +3,7 @@
 
 @section('css')
     <!-- Internal Select2 css -->
-    <link href="{{ URL::asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet">
 @endsection
 @section('page-header')
     <!-- breadcrumb -->
@@ -47,7 +47,8 @@
                                     <label class="form-label">كلمة المرور الحالية</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input type="password" autocomplete="new-password" class="form-control" name="current_password">
+                                    <input type="password" autocomplete="new-password" class="form-control"
+                                        name="current_password">
                                 </div>
                             </div>
                         </div>
@@ -57,7 +58,8 @@
                                     <label class="form-label">كلمة المرور الجديدة</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input type="password" autocomplete="new-password" class="form-control" name="new_password">
+                                    <input type="password" autocomplete="new-password" class="form-control"
+                                        name="new_password">
                                 </div>
                             </div>
                         </div>
@@ -83,10 +85,10 @@
 @endsection
 @section('js')
     <!--Internal  Chart.bundle js -->
-    <script src="{{ URL::asset('assets/plugins/chart.js/Chart.bundle.min.js') }}"></script>
+    <script src="/assets/plugins/chart.js/Chart.bundle.min.js"></script>
     <!-- Internal Select2.min js -->
-    <script src="{{ URL::asset('assets/plugins/select2/js/select2.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/select2.js') }}"></script>
+    <script src="/assets/plugins/select2/js/select2.min.js"></script>
+    <script src="/assets/js/select2.js"></script>
     <script>
         function hideAlert(id) {
             setTimeout(function() {

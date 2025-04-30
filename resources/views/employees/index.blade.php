@@ -3,12 +3,12 @@
 
 @section('css')
     <!-- Internal Data table css -->
-    <link href="{{ URL::asset('assets/plugins/datatable/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/plugins/datatable/css/buttons.bootstrap4.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/plugins/datatable/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" />
-    <link href="{{ URL::asset('assets/plugins/datatable/css/jquery.dataTables.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/plugins/datatable/css/responsive.dataTables.min.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+    <link href="/assets/plugins/datatable/css/buttons.bootstrap4.min.css" rel="stylesheet">
+    <link href="/assets/plugins/datatable/css/responsive.bootstrap4.min.css" rel="stylesheet" />
+    <link href="/assets/plugins/datatable/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="/assets/plugins/datatable/css/responsive.dataTables.min.css" rel="stylesheet">
+    <link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet">
     <style>
         thead tr th,
         tbody tr td {
@@ -127,7 +127,8 @@
                                                         data-id="{{ $employee->id }}">حذف</a>
                                                 @endcan
 
-                                                @if (auth()->user()->can('employees.attachments.index') || (auth()->user()->can('employees.employee.attachments.index') && Auth::id() == $employee->id))
+                                                @if (auth()->user()->can('employees.attachments.index') ||
+                                                        (auth()->user()->can('employees.employee.attachments.index') && Auth::id() == $employee->id))
                                                     <a href="{{ route('employee.attachments.index', $employee->id) }}"
                                                         class="btn btn-primary-gradient btn-sm d-flex justify-content-center align-items-center">المرفقات</i></a>
                                                 @endcan
@@ -176,23 +177,23 @@
 @endsection
 @section('js')
 <!-- Internal Data tables -->
-<script src="{{ URL::asset('assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.dataTables.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.responsive.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/responsive.dataTables.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/jquery.dataTables.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.bootstrap4.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.buttons.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/buttons.bootstrap4.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/jszip.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/pdfmake.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/vfs_fonts.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/buttons.html5.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/buttons.print.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/buttons.colVis.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.responsive.min.js') }}"></script>
-<script src="{{ URL::asset('assets/plugins/datatable/js/responsive.bootstrap4.min.js') }}"></script>
-<script src="{{ URL::asset('assets/js/table-data.js') }}"></script>
+<script src="/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+<script src="/assets/plugins/datatable/js/dataTables.dataTables.min.js"></script>
+<script src="/assets/plugins/datatable/js/dataTables.responsive.min.js"></script>
+<script src="/assets/plugins/datatable/js/responsive.dataTables.min.js"></script>
+<script src="/assets/plugins/datatable/js/jquery.dataTables.js"></script>
+<script src="/assets/plugins/datatable/js/dataTables.bootstrap4.js"></script>
+<script src="/assets/plugins/datatable/js/dataTables.buttons.min.js"></script>
+<script src="/assets/plugins/datatable/js/buttons.bootstrap4.min.js"></script>
+<script src="/assets/plugins/datatable/js/jszip.min.js"></script>
+<script src="/assets/plugins/datatable/js/pdfmake.min.js"></script>
+<script src="/assets/plugins/datatable/js/vfs_fonts.js"></script>
+<script src="/assets/plugins/datatable/js/buttons.html5.min.js"></script>
+<script src="/assets/plugins/datatable/js/buttons.print.min.js"></script>
+<script src="/assets/plugins/datatable/js/buttons.colVis.min.js"></script>
+<script src="/assets/plugins/datatable/js/dataTables.responsive.min.js"></script>
+<script src="/assets/plugins/datatable/js/responsive.bootstrap4.min.js"></script>
+<script src="/assets/js/table-data.js"></script>
 
 <script>
     // Function to hide alert after 5 seconds

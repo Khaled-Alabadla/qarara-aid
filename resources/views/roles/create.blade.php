@@ -3,7 +3,7 @@
 
 @section('css')
     <!-- Internal Select2 css -->
-    <link href="{{ URL::asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
     <style>
         .form-check {
             margin-bottom: 7px
@@ -97,8 +97,8 @@
 @endsection
 @section('js')
     <!--Internal  Chart.bundle js -->
-    <script src="{{ URL::asset('assets/plugins/chart.js/Chart.bundle.min.js') }}"></script>
+    <script src="/assets/plugins/chart.js/Chart.bundle.min.js"></script>
     <!-- Internal Select2.min js -->
-    <script src="{{ URL::asset('assets/plugins/select2/js/select2.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/select2.js') }}"></script>
+    <script src="/assets/plugins/select2/js/select2.min.js"></script>
+    <script src="/assets/js/select2.js"></script>
 @endsection

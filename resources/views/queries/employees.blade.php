@@ -4,25 +4,25 @@
 @section('css')
     <!-- Internal Data table css -->
 @section('css')
-    <link href="{{ URL::asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet">
     <!--Internal  Datetimepicker-slider css -->
-    <link href="{{ URL::asset('assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.css') }}" rel="stylesheet">
-    <link href="{{ URL::asset('assets/plugins/pickerjs/picker.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/amazeui-datetimepicker/css/amazeui.datetimepicker.css" rel="stylesheet">
+    <link href="/assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.css" rel="stylesheet">
+    <link href="/assets/plugins/pickerjs/picker.min.css" rel="stylesheet">
     <!-- Internal Spectrum-colorpicker css -->
-    <link href="{{ URL::asset('assets/plugins/spectrum-colorpicker/spectrum.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/spectrum-colorpicker/spectrum.css" rel="stylesheet">
 
-    <link href="{{ URL::asset('assets/plugins/datatable/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet" />
+    <link href="/assets/plugins/datatable/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
 
-    <link href="{{ URL::asset('assets/plugins/datatable/css/buttons.bootstrap4.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/datatable/css/buttons.bootstrap4.min.css" rel="stylesheet">
 
-    <link href="{{ URL::asset('assets/plugins/datatable/css/responsive.bootstrap4.min.css') }}" rel="stylesheet" />
+    <link href="/assets/plugins/datatable/css/responsive.bootstrap4.min.css" rel="stylesheet" />
 
-    <link href="{{ URL::asset('assets/plugins/datatable/css/jquery.dataTables.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/datatable/css/jquery.dataTables.min.css" rel="stylesheet">
 
-    <link href="{{ URL::asset('assets/plugins/datatable/css/responsive.dataTables.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/datatable/css/responsive.dataTables.min.css" rel="stylesheet">
 
-    <link href="{{ URL::asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet">
 
     <style>
         thead tr th,
@@ -54,7 +54,7 @@
     <div class="my-auto">
         <div class="d-flex">
             <h4 class="content-title mb-0 my-auto">الاستعلامات والتقارير</h4><span
-                class="text-muted mt-1 tx-13 mr-2 mb-0">/ الموظفين 
+                class="text-muted mt-1 tx-13 mr-2 mb-0">/ الموظفين
             </span>
         </div>
     </div>
@@ -120,32 +120,31 @@
                 </form>
 
                 @if (request()->query('user'))
-                    
-                <div class="table-responsive" style="margin-top: 40px">
-                    <table id="example" class="table key-buttons text-md-nowrap">
-                        <thead>
-                            <tr>
-                                <th class="border-bottom-0">الاسم</th>
-                                <th class="border-bottom-0">نوع المساعدة</th>
-                                <th class="border-bottom-0">الجهة المانحة</th>
-                                <th class="border-bottom-0">الكمية</th>
-                                <th cla\ss="border-bottom-0">تاريخ الاستلام</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach ($distributes as $distribute)
+                    <div class="table-responsive" style="margin-top: 40px">
+                        <table id="example" class="table key-buttons text-md-nowrap">
+                            <thead>
                                 <tr>
-                                    <td>{{ $distribute->user->name }}</td>
-                                    <td>{{ $distribute->assistance->type }}</td>
-                                    <td>{{ $distribute->donor->name }}</td>
-                                    <td>{{ $distribute->quantity }}</td>
-                                    <td>{{ date_format(date_create($distribute->assistance->date), 'd/m/Y') }}</td>
+                                    <th class="border-bottom-0">الاسم</th>
+                                    <th class="border-bottom-0">نوع المساعدة</th>
+                                    <th class="border-bottom-0">الجهة المانحة</th>
+                                    <th class="border-bottom-0">الكمية</th>
+                                    <th cla\ss="border-bottom-0">تاريخ الاستلام</th>
                                 </tr>
-                            @endforeach
+                            </thead>
+                            <tbody>
+                                @foreach ($distributes as $distribute)
+                                    <tr>
+                                        <td>{{ $distribute->user->name }}</td>
+                                        <td>{{ $distribute->assistance->type }}</td>
+                                        <td>{{ $distribute->donor->name }}</td>
+                                        <td>{{ $distribute->quantity }}</td>
+                                        <td>{{ date_format(date_create($distribute->assistance->date), 'd/m/Y') }}</td>
+                                    </tr>
+                                @endforeach
 
-                        </tbody>
-                    </table>
-                </div>
+                            </tbody>
+                        </table>
+                    </div>
                 @endif
 
             </div>
@@ -182,59 +181,57 @@
 </div>
 <!-- main-content closed -->
 @endsection
-@section('js')
 <!-- Internal Data tables -->
 @section('js')
-    <!--Internal  Datepicker js -->
-    <script src="{{ URL::asset('assets/plugins/jquery-ui/ui/widgets/datepicker.js') }}"></script>
-    <!--Internal  jquery.maskedinput js -->
-    <script src="{{ URL::asset('assets/plugins/jquery.maskedinput/jquery.maskedinput.js') }}"></script>
-    <!--Internal  spectrum-colorpicker js -->
-    <script src="{{ URL::asset('assets/plugins/spectrum-colorpicker/spectrum.js') }}"></script>
-    <!-- Internal Select2.min js -->
-    <script src="{{ URL::asset('assets/plugins/select2/js/select2.min.js') }}"></script>
-    <!--Internal Ion.rangeSlider.min js -->
-    <script src="{{ URL::asset('assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js') }}"></script>
-    <!--Internal  jquery-simple-datetimepicker js -->
-    <script src="{{ URL::asset('assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js') }}"></script>
-    <!-- Ionicons js -->
-    <script src="{{ URL::asset('assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.js') }}"></script>
-    <!--Internal  pickerjs js -->
-    <script src="{{ URL::asset('assets/plugins/pickerjs/picker.min.js') }}"></script>
-    <!-- Internal form-elements js -->
-    <script src="{{ URL::asset('assets/js/form-elements.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/jquery-ui/ui/widgets/datepicker.js') }}"></script>
-    <!--Internal  jquery.maskedinput js -->
-    <script src="{{ URL::asset('assets/plugins/jquery.maskedinput/jquery.maskedinput.js') }}"></script>
-    <!--Internal  spectrum-colorpicker js -->
-    <script src="{{ URL::asset('assets/plugins/spectrum-colorpicker/spectrum.js') }}"></script>
-    <!-- Internal Select2.min js -->
-    <script src="{{ URL::asset('assets/plugins/select2/js/select2.min.js') }}"></script>
-    <!--Internal Ion.rangeSlider.min js -->
+<!--Internal  Datepicker js -->
+<script src="/assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+<!--Internal  jquery.maskedinput js -->
+<script src="/assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+<!--Internal  spectrum-colorpicker js -->
+<script src="/assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+<!-- Internal Select2.min js -->
+<script src="/assets/plugins/select2/js/select2.min.js"></script>
+<!--Internal Ion.rangeSlider.min js -->
+<script src="/assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<!--Internal  jquery-simple-datetimepicker js -->
+<script src="/assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+<!-- Ionicons js -->
+<script src="/assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.js"></script>
+<!--Internal  pickerjs js -->
+<script src="/assets/plugins/pickerjs/picker.min.js"></script>
+<!-- Internal form-elements js -->
+<script src="/assets/js/form-elements.js"></script>
+<script src="/assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+<!--Internal  jquery.maskedinput js -->
+<script src="/assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+<!--Internal  spectrum-colorpicker js -->
+<script src="/assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+<!-- Internal Select2.min js -->
+<script src="/assets/plugins/select2/js/select2.min.js"></script>
+<!--Internal Ion.rangeSlider.min js -->
 
-    <!-- Internal form-elements js -->
+<!-- Internal form-elements js -->
 
-    <script src="{{ URL::asset('assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.responsive.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/responsive.dataTables.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/jquery.dataTables.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.bootstrap4.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.buttons.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/buttons.bootstrap4.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/jszip.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/pdfmake.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/vfs_fonts.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/buttons.html5.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/buttons.print.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/buttons.colVis.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/dataTables.responsive.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/plugins/datatable/js/responsive.bootstrap4.min.js') }}"></script>
-    <script src="{{ URL::asset('assets/js/table-data.js') }}"></script>
-
+<script src="/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+<script src="/assets/plugins/datatable/js/dataTables.dataTables.min.js"></script>
+<script src="/assets/plugins/datatable/js/dataTables.responsive.min.js"></script>
+<script src="/assets/plugins/datatable/js/responsive.dataTables.min.js"></script>
+<script src="/assets/plugins/datatable/js/jquery.dataTables.js"></script>
+<script src="/assets/plugins/datatable/js/dataTables.bootstrap4.js"></script>
+<script src="/assets/plugins/datatable/js/dataTables.buttons.min.js"></script>
+<script src="/assets/plugins/datatable/js/buttons.bootstrap4.min.js"></script>
+<script src="/assets/plugins/datatable/js/jszip.min.js"></script>
+<script src="/assets/plugins/datatable/js/pdfmake.min.js"></script>
+<script src="/assets/plugins/datatable/js/vfs_fonts.js"></script>
+<script src="/assets/plugins/datatable/js/buttons.html5.min.js"></script>
+<script src="/assets/plugins/datatable/js/buttons.print.min.js"></script>
+<script src="/assets/plugins/datatable/js/buttons.colVis.min.js"></script>
+<script src="/assets/plugins/datatable/js/dataTables.responsive.min.js"></script>
+<script src="/assets/plugins/datatable/js/responsive.bootstrap4.min.js"></script>
+<script src="/assets/js/table-data.js"></script>
 @endsection
 <!--Internal  Datatable js -->
-<script src="{{ URL::asset('assets/js/table-data.js') }}"></script>
+<script src="/assets/js/table-data.js"></script>
 <script>
     // Function to hide alert after 5 seconds
     function hideAlert(id) {

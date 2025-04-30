@@ -3,7 +3,7 @@
 
 @section('css')
     <!-- Internal Select2 css -->
-    <link href="{{ URL::asset('assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+    <link href="/assets/plugins/select2/css/select2.min.css" rel="stylesheet">
     <style>
         .form-check {
             margin-bottom: 7px
@@ -48,7 +48,8 @@
                         </div>
                     @endif
                     {{-- <div class="mb-4 main-content-label">Personal Information</div> --}}
-                    <form class="form-horizontal" action="{{ route('assistances.update', $assistance->id) }}" method="POST">
+                    <form class="form-horizontal" action="{{ route('assistances.update', $assistance->id) }}"
+                        method="POST">
                         @csrf
                         @method('PUT')
                         <div class="form-group ">
@@ -130,7 +131,7 @@
                                     <label class="form-label">الموظفين المستلمين</label>
                                 </div>
                                 <div class="col-md-9">
-                                    
+
                                     @foreach ($employees as $employee)
                                         <div
                                             class="form-check d-flex align-items-center justify-content-between gap-3 mb-3 border-bottom pb-2">
@@ -173,24 +174,24 @@
     </div>
 @endsection
 @section('js')
-      <!--Internal  Datepicker js -->
-      <script src="{{ URL::asset('assets/plugins/jquery-ui/ui/widgets/datepicker.js') }}"></script>
-      <!--Internal  jquery.maskedinput js -->
-      <script src="{{ URL::asset('assets/plugins/jquery.maskedinput/jquery.maskedinput.js') }}"></script>
-      <!--Internal  spectrum-colorpicker js -->
-      <script src="{{ URL::asset('assets/plugins/spectrum-colorpicker/spectrum.js') }}"></script>
-      <!-- Internal Select2.min js -->
-      <script src="{{ URL::asset('assets/plugins/select2/js/select2.min.js') }}"></script>
-      <!--Internal Ion.rangeSlider.min js -->
-      <script src="{{ URL::asset('assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js') }}"></script>
-      <!--Internal  jquery-simple-datetimepicker js -->
-      <script src="{{ URL::asset('assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js') }}"></script>
-      <!-- Ionicons js -->
-      <script src="{{ URL::asset('assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.js') }}"></script>
-      <!--Internal  pickerjs js -->
-      <script src="{{ URL::asset('assets/plugins/pickerjs/picker.min.js') }}"></script>
-      <!-- Internal form-elements js -->
-      <script src="{{ URL::asset('assets/js/form-elements.js') }}"></script>
+    <!--Internal  Datepicker js -->
+    <script src="/assets/plugins/jquery-ui/ui/widgets/datepicker.js"></script>
+    <!--Internal  jquery.maskedinput js -->
+    <script src="/assets/plugins/jquery.maskedinput/jquery.maskedinput.js"></script>
+    <!--Internal  spectrum-colorpicker js -->
+    <script src="/assets/plugins/spectrum-colorpicker/spectrum.js"></script>
+    <!-- Internal Select2.min js -->
+    <script src="/assets/plugins/select2/js/select2.min.js"></script>
+    <!--Internal Ion.rangeSlider.min js -->
+    <script src="/assets/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+    <!--Internal  jquery-simple-datetimepicker js -->
+    <script src="/assets/plugins/amazeui-datetimepicker/js/amazeui.datetimepicker.min.js"></script>
+    <!-- Ionicons js -->
+    <script src="/assets/plugins/jquery-simple-datetimepicker/jquery.simple-dtpicker.js"></script>
+    <!--Internal  pickerjs js -->
+    <script src="/assets/plugins/pickerjs/picker.min.js"></script>
+    <!-- Internal form-elements js -->
+    <script src="/assets/js/form-elements.js"></script>
     <script>
         let checkboxes = document.querySelectorAll('.employee-checkbox');
         checkboxes.forEach((checkbox) => {
@@ -208,8 +209,8 @@
 
         let quantityInputs = document.querySelectorAll('.employee-quantity');
         quantityInputs.forEach((input) => {
-            
-            if(input.value != '0') {
+
+            if (input.value != '0') {
                 input.removeAttribute('readonly')
             }
         })
