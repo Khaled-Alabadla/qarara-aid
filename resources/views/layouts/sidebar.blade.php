@@ -162,9 +162,9 @@
                     <div class="list-group list-group-flush ">
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-3">
-                                <span class="avatar avatar-lg brround cover-image"
+                                {{-- <span class="avatar avatar-lg brround cover-image"
                                     data-image-src="/assets/img/faces/12.jpg"><span
-                                        class="avatar-status bg-success"></span></span>
+                                        class="avatar-status bg-success"></span></span> --}}
                             </div>
                             <div>
                                 <strong>Madeleine</strong> Hey! there I' am available....
@@ -175,8 +175,8 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-3">
-                                <span class="avatar avatar-lg brround cover-image"
-                                    data-image-src="/assets/img/faces/1.jpg"></span>
+                                {{-- <span class="avatar avatar-lg brround cover-image"
+                                    data-image-src="/assets/img/faces/1.jpg"></span> --}}
                             </div>
                             <div>
                                 <strong>Anthony</strong> New product Launching...
@@ -187,9 +187,9 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-3">
-                                <span class="avatar avatar-lg brround cover-image"
+                                {{-- <span class="avatar avatar-lg brround cover-image"
                                     data-image-src="/assets/img/faces/2.jpg"><span
-                                        class="avatar-status bg-success"></span></span>
+                                        class="avatar-status bg-success"></span></span> --}}
                             </div>
                             <div>
                                 <strong>Olivia</strong> New Schedule Realease......
@@ -200,9 +200,9 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-3">
-                                <span class="avatar avatar-lg brround cover-image"
+                                {{-- <span class="avatar avatar-lg brround cover-image"
                                     data-image-src="/assets/img/faces/8.jpg"><span
-                                        class="avatar-status bg-success"></span></span>
+                                        class="avatar-status bg-success"></span></span> --}}
                             </div>
                             <div>
                                 <strong>Madeleine</strong> Hey! there I' am available....
@@ -213,8 +213,8 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-3">
-                                <span class="avatar avatar-lg brround cover-image"
-                                    data-image-src="/assets/img/faces/11.jpg"></span>
+                                {{-- <span class="avatar avatar-lg brround cover-image"
+                                    data-image-src="/assets/img/faces/11.jpg"></span> --}}
                             </div>
                             <div>
                                 <strong>Anthony</strong> New product Launching...
@@ -260,8 +260,8 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
-                                    data-image-src="/assets/img/faces/11.jpg"></span>
+                                {{-- <span class="avatar avatar-md brround cover-image"
+                                    data-image-src="/assets/img/faces/11.jpg"></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
@@ -274,9 +274,9 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
+                                {{-- <span class="avatar avatar-md brround cover-image"
                                     data-image-src="/assets/img/faces/10.jpg"><span
-                                        class="avatar-status bg-success"></span></span>
+                                        class="avatar-status bg-success"></span></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">Alina
@@ -289,9 +289,9 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
+                                {{-- <span class="avatar avatar-md brround cover-image"
                                     data-image-src="/assets/img/faces/2.jpg"><span
-                                        class="avatar-status bg-success"></span></span>
+                                        class="avatar-status bg-success"></span></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">Zula
@@ -304,8 +304,8 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
-                                    data-image-src="/assets/img/faces/13.jpg"></span>
+                                {{-- <span class="avatar avatar-md brround cover-image"
+                                    data-image-src="/assets/img/faces/13.jpg"></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">Isidro
@@ -318,9 +318,9 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
+                                {{-- <span class="avatar avatar-md brround cover-image"
                                     data-image-src="/assets/img/faces/12.jpg"><span
-                                        class="avatar-status bg-success"></span></span>
+                                        class="avatar-status bg-success"></span></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
@@ -333,8 +333,8 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
-                                    data-image-src="/assets/img/faces/4.jpg"></span>
+                                {{-- <span class="avatar avatar-md brround cover-image"
+                                    data-image-src="/assets/img/faces/4.jpg"></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
@@ -347,8 +347,8 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
-                                    data-image-src="/assets/img/faces/7.jpg"></span>
+                                {{-- <span class="avatar avatar-md brround cover-image"
+                                    data-image-src="/assets/img/faces/7.jpg"></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">Alina
@@ -361,8 +361,8 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
-                                    data-image-src="/assets/img/faces/2.jpg"></span>
+                                {{-- <span class="avatar avatar-md brround cover-image"
+                                    data-image-src="/assets/img/faces/2.jpg"></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">Zula
@@ -375,9 +375,9 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
+                                {{-- <span class="avatar avatar-md brround cover-image"
                                     data-image-src="/assets/img/faces/14.jpg"><span
-                                        class="avatar-status bg-success"></span></span>
+                                        class="avatar-status bg-success"></span></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">Isidro
@@ -390,8 +390,8 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
-                                    data-image-src="/assets/img/faces/11.jpg"></span>
+                                {{-- <span class="avatar avatar-md brround cover-image"
+                                    data-image-src="/assets/img/faces/11.jpg"></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">
@@ -415,9 +415,9 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
+                                {{-- <span class="avatar avatar-md brround cover-image"
                                     data-image-src="/assets/img/faces/15.jpg"><span
-                                        class="avatar-status bg-success"></span></span>
+                                        class="avatar-status bg-success"></span></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">Zula
@@ -430,8 +430,8 @@
                         </div>
                         <div class="list-group-item d-flex  align-items-center">
                             <div class="ml-2">
-                                <span class="avatar avatar-md brround cover-image"
-                                    data-image-src="/assets/img/faces/4.jpg"></span>
+                                {{-- <span class="avatar avatar-md brround cover-image"
+                                    data-image-src="/assets/img/faces/4.jpg"></span> --}}
                             </div>
                             <div class="">
                                 <div class="font-weight-semibold" data-toggle="modal" data-target="#chatmodel">Isidro

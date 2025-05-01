@@ -31,7 +31,7 @@
 -->
         <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
             <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-                <img class="mx-auto w-[250px]" src={{ asset('assets/img/logo.jpg') }} alt="Your Company">
+                <img class="mx-auto w-[250px]" src="/assets/img/logo.jpg" alt="Your Company">
                 <h2 class="mt-3 text-center text-2xl/9 font-bold tracking-tight text-gray-900">الدخول إلى حسابك الخاص
                 </h2>
             </div>

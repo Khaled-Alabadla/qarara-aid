@@ -5,7 +5,7 @@
 <!-- Bootstrap Bundle js -->
 <script src="/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Ionicons js -->
-<script src="/assets/plugins/ionicons/ionicons.js"></script>
+{{-- <script src="/assets/plugins/ionicons/ionicons.js"></script> --}}
 <!-- Moment js -->
 <script src="/assets/plugins/moment/moment.js"></script>
 

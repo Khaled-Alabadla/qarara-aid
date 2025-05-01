@@ -3,13 +3,13 @@
 <aside class="app-sidebar sidebar-scroll">
     <div class="main-sidebar-header active">
         <a class="desktop-logo logo-light active" style="height: 94%" href="{{ route('dashboard', 'home') }}"><img
-                style="height: 100%" src="{{ asset('assets/img/logo.jpg') }}" class="main-logo" alt="logo"></a>
+                style="height: 100%" src="/assets/img/logo.jpg" class="main-logo" alt="logo"></a>
         <a class="desktop-logo logo-dark active" href="{{ url('/' . ($page = 'home')) }}"><img
-                src="{{ asset('assets/img/logo.jpg') }}" class="main-logo dark-theme" alt="logo"></a>
+                src="/assets/img/logo.jpg" class="main-logo dark-theme" alt="logo"></a>
         <a class="logo-icon mobile-logo icon-light active" href="{{ url('/' . ($page = 'home')) }}"><img
-                src="{{ asset('assets/img/logo.jpg') }}" class="logo-icon" alt="logo"></a>
+                src="/assets/img/logo.jpg" class="logo-icon" alt="logo"></a>
         <a class="logo-icon mobile-logo icon-dark active" href="{{ url('/' . ($page = 'home')) }}"><img
-                src="{{ asset('assets/img/logo.jpg') }}" class="logo-icon dark-theme" alt="logo"></a>
+                src="/assets/img/logo.jpg" class="logo-icon dark-theme" alt="logo"></a>
     </div>
     <div class="main-sidemenu">
         <div class="app-sidebar__user clearfix">
@@ -78,11 +78,11 @@
                     <ul class="slide-menu">
 
                         @can('roles.index')
-                            <li><a class="slide-item" href="{{ route('dashboard.roles.index') }}">عرض قائمة الصلاحيات</a></li>
+                            <li><a class="slide-item" href="{{ route('roles.index') }}">عرض قائمة الصلاحيات</a></li>
                         @endcan
 
                         @can('roles.create')
-                            <li><a class="slide-item" href="{{ route('dashboard.roles.create') }}">إضافة صلاحية جديدة</a></li>
+                            <li><a class="slide-item" href="{{ route('roles.create') }}">إضافة صلاحية جديدة</a></li>
                         @endcan
 
                         @can('roles.users.index')
@@ -140,32 +140,32 @@
             @endcan
 
             @can('assistances.display')
-            <li class="side-item side-item-category">المساعدات</li>
-            <li class="slide">
-                <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
-                    <i class="fas fa-hands-helping"></i>
-                    <span class="side-menu__label">المساعدات</span><i class="angle fe fe-chevron-down"></i></a>
-                <ul class="slide-menu">
+                <li class="side-item side-item-category">المساعدات</li>
+                <li class="slide">
+                    <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
+                        <i class="fas fa-hands-helping"></i>
+                        <span class="side-menu__label">المساعدات</span><i class="angle fe fe-chevron-down"></i></a>
+                    <ul class="slide-menu">
 
-                    @can('assistances.index')
-                        <li><a class="slide-item" href="{{ route('assistances.index') }}">المساعدات الإجمالية</a></li>
-                    @endcan
+                        @can('assistances.index')
+                            <li><a class="slide-item" href="{{ route('assistances.index') }}">المساعدات الإجمالية</a></li>
+                        @endcan
 
-                    @can('assistances.user')
-                        <li><a class="slide-item" href="{{ route('assistances.user', Auth::user()->id) }}">المساعدات
-                                المستلمة</a></li>
-                    @endcan
+                        @can('assistances.user')
+                            <li><a class="slide-item" href="{{ route('assistances.user', Auth::user()->id) }}">المساعدات
+                                    المستلمة</a></li>
+                        @endcan
 
-                    @can('assistances.create')
-                        <li><a class="slide-item" href="{{ route('assistances.create') }}">إضافة مساعدة جديدة</a></li>
-                    @endcan
+                        @can('assistances.create')
+                            <li><a class="slide-item" href="{{ route('assistances.create') }}">إضافة مساعدة جديدة</a></li>
+                        @endcan
 
-                    @can('assistances.trash')
-                        <li><a class="slide-item" href="{{ route('assistances.trash') }}">المساعدات المحذوفة</a></li>
-                    @endcan
-                </ul>
-            </li>
-        @endcan
+                        @can('assistances.trash')
+                            <li><a class="slide-item" href="{{ route('assistances.trash') }}">المساعدات المحذوفة</a></li>
+                        @endcan
+                    </ul>
+                </li>
+            @endcan
 
 
             @can('queries.display')
@@ -213,7 +213,8 @@
                     @endcan
 
                     @can('users.reset_password_to_employees')
-                        <li><a class="slide-item" href="{{ route('employees.reset_password_to_employee') }}">تغيير كلمة المرور لموظف
+                        <li><a class="slide-item" href="{{ route('employees.reset_password_to_employee') }}">تغيير كلمة
+                                المرور لموظف
                                 معين</a></li>
                     @endcan
                 </ul>

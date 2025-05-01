@@ -161,18 +161,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <label class="form-label">الصورة الشخصية</label>
-                                </div>
-                                <div class="col-sm-12 col-md-12">
-                                    <input type="file" name="pic" class="dropify"
-                                        accept=".pdf,.jpg, .png, image/jpeg, image/png" data-height="70" />
-                                </div><br>
-                            </div>
-                        </div>
-
+                    
                         <div class="card-footer text-right">
                             <button type="submit" class="btn btn-primary waves-effect waves-light">إضافة</button>
                         </div>

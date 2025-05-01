@@ -74,7 +74,7 @@ class RolesController extends Controller
             throw $e;
         }
 
-        return redirect()->route('dashboard.roles.index')->with('success', 'تمت الإضافة بنجاح');
+        return redirect()->route('roles.index')->with('success', 'تمت الإضافة بنجاح');
     }
 
     /**
@@ -143,7 +143,7 @@ class RolesController extends Controller
             ->whereIn('ability', $abilitiesToRemove)
             ->delete();
 
-        return redirect()->route('dashboard.roles.index')->with('success', 'تم التعديل بنجاح');
+        return redirect()->route('roles.index')->with('success', 'تم التعديل بنجاح');
     }
 
     public function destroy(string $id)
@@ -152,6 +152,6 @@ class RolesController extends Controller
 
         Role::destroy($id);
 
-        return redirect()->route('dashboard.roles.index')->with('success', 'تم الحذف بنجاح');
+        return redirect()->route('roles.index')->with('success', 'تم الحذف بنجاح');
     }
 }

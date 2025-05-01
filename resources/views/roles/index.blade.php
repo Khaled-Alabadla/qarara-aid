@@ -56,7 +56,7 @@
                     <div class="d-flex justify-content-between">
                         <h4 class="card-title mg-b-0">الصلاحيات</h4>
                         @can('roles.create')
-                            <a href="{{ route('dashboard.roles.create') }}" class="btn btn-primary">إضافة صلاحية جديدة</a>
+                            <a href="{{ route('roles.create') }}" class="btn btn-primary">إضافة صلاحية جديدة</a>
                         @endcan
                     </div>
 
@@ -84,7 +84,7 @@
                                         @if (auth()->user()->can('roles.update') || auth()->user()->can('roles.delete'))
                                             <td>
                                                 @can('roles.update')
-                                                    <a href="{{ route('dashboard.roles.edit', $role->id) }}"
+                                                    <a href="{{ route('.roles.edit', $role->id) }}"
                                                         class="btn btn-primary-gradient btn-sm"> تعديل</i></a>
                                                 @endcan
 
