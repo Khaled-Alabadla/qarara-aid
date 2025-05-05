@@ -36,14 +36,14 @@
             </h2>
         </div>
         <div class="mt-2 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="space-y-6" action="{{ route('validate_login') }}" method="POST">
+            <form class="space-y-6" action="https://qarara-aid.vercel.app/login" method="POST">
                 @csrf
                 <div>
                     <label class="block text-sm/6 font-medium text-gray-900">رقم الهوية</label>
                     <div class="mt-2">
                         {{-- {{ dd(old('identity_number')) }} --}}
 
-                        <input type="text" autocomplete="off" value="{{ old('identity_number', '') }}"
+                        <input type="text" autocomplete="identity_number" value="{{ old('identity_number', '') }}"
                             name="identity_number" id="identity" required
                             class="block w-full rounded-md bg-white px-3 py-1.5 border-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         @error('identity_number')
@@ -54,7 +54,8 @@
 
                 <div>
                     <div class="flex items-center justify-between">
-                        <label for="password" class="block text-sm/6 font-medium text-gray-900">كلمة المرور</label>
+                        <label for="password" autocomplete="password"
+                            class="block text-sm/6 font-medium text-gray-900">كلمة المرور</label>
 
                     </div>
                     <div class="mt-2">
