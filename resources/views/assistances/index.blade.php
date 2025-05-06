@@ -54,7 +54,8 @@
                     <div class="d-flex justify-content-between">
                         <h4 class="card-title mg-b-0">المساعدات</h4>
                         @can('assistances.create')
-                            <a href="{{ route('assistances.create') }}" class="btn btn-primary">إضافة مساعدة جديدة</a>
+                            <a href="https://qarara-aid.vercel.app/assistances/create" class="btn btn-primary">إضافة مساعدة
+                                جديدة</a>
                         @endcan
                     </div>
 
@@ -104,12 +105,12 @@
                                                 auth()->user()->can('assistances.show'))
                                             <td>
                                                 @can('assistances.show')
-                                                    <a href="{{ route('assistances.show', $assistance->id) }}"
+                                                    <a href="https://qarara-aid.vercel.app/assistances/{{ $assistance->id }}"
                                                         class="btn btn-primary-gradient btn-sm">عرض التفاصيل</i></a>
                                                 @endcan
 
                                                 @can('assistances.update')
-                                                    <a href="{{ route('assistances.edit', $assistance->id) }}"
+                                                    <a href="https://qarara-aid.vercel.app/assistances/{{ $assistance->id }}/edit"
                                                         class="btn btn-secondary-gradient btn-sm"> تعديل</i></a>
                                                 @endcan
 

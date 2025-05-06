@@ -89,7 +89,7 @@
                                         @if (auth()->user()->can('assistances.restore') || auth()->user()->can('assistances.force_delete'))
                                             <td>
                                                 @can('assistances.restore')
-                                                    <a href="{{ route('assistances.restore', $assistance->id) }}"
+                                                    <a href="https://qarara-aid.vercel.app/assistances/{{ $assistance->id }}/restore"
                                                         class="btn btn-primary-gradient btn-sm"> استعادة</i></a>
                                                 @endcan
 

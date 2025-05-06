@@ -53,7 +53,7 @@
                     <div class="d-flex justify-content-between">
                         <h4 class="card-title mg-b-0">الموظفين</h4>
                         @can('employees.create')
-                            <a href="{{ route('employees.create') }}" class="btn btn-primary">إضافة موظف جديد</a>
+                            <a href="https://qarara-aid.vercel.app/employees/create" class="btn btn-primary">إضافة موظف جديد</a>
                         @endcan
                     </div>
 
@@ -116,7 +116,7 @@
                                                 auth()->user()->can('employees.employee.attachments.index'))
                                             <td class="d-flex" style="gap: 3px">
                                                 @if (auth()->id() != $employee->id && auth()->user()->can('employees.update'))
-                                                    <a href="{{ route('employees.edit', $employee->id) }}"
+                                                    <a href="https://qarara-aid.vercel.app/employees/{{ $employee->id }}/edit"
                                                         class="btn btn-primary-gradient btn-sm d-flex justify-content-center align-items-center">
                                                         تعديل</i></a>
                                                 @endif
@@ -128,7 +128,7 @@
                                                 @endif
                                                 @if (auth()->user()->can('employees.attachments.index') ||
                                                         (auth()->user()->can('employees.employee.attachments.index') && Auth::id() == $employee->id))
-                                                    <a href="{{ route('employee.attachments.index', $employee->id) }}"
+                                                    <a href="https://qarara-aid.vercel.app/employees/{{ $employee->id }}/attachments"
                                                         class="btn btn-primary-gradient btn-sm d-flex justify-content-center align-items-center">المرفقات</i></a>
                                                 @endcan
                                         </td>

@@ -89,7 +89,7 @@
                                         </td>
                                         <td>
                                             @can('roles.users.update')
-                                                <a href="{{ route('employees.roles.edit', $employee->id) }}"
+                                                <a href="https://qarara-aid.vercel.app/employees/{{ $employee->id }}/roles/edit"
                                                     class="btn btn-primary-gradient btn-sm">تعديل الصلاحيات</i></a>
                                             @endcan
                                         </td>

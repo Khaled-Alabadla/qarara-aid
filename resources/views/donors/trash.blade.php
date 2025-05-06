@@ -87,7 +87,7 @@
                                         @if (auth()->user()->can('donors.restore') || auth()->user()->can('donors.force_delete'))
                                             <td>
                                                 @can('donors.restore')
-                                                    <a href="{{ route('donors.restore', $donor->id) }}"
+                                                    <a href="https://qarara-aid.vercel.app/donors/{{ $donor->id }}/restore"
                                                         class="btn btn-primary-gradient btn-sm"> استعادة</i></a>
                                                 @endcan
 

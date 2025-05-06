@@ -57,8 +57,8 @@
                                     </a>
 
                                     <form id="mark-as-read-{{ $notification->id }}"
-                                        action="{{ route('notifications.read', $notification->id) }}" method="POST"
-                                        style="display: none;">
+                                        action="https://qarara-aid.vercel.app/notifications/{{ $notification->id }}/read"
+                                        method="POST" style="display: none;">
                                         @csrf
                                         @method('PATCH')
                                     </form>
@@ -94,12 +94,14 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="dropdown-item" href="{{ route('employees.editProfile', Auth::user()->id) }}">
+                        <a class="dropdown-item"
+                            href="https://qarara-aid.vercel.app/employees/{{ Auth::id() }}/edit-profile">
                             <i class="bx bxs-inbox"></i>
 
                             تعديل الملف الشخصي
                         </a>
-                        <a class="dropdown-item" href="{{ route('employees.reset_password', Auth::id()) }}">
+                        <a class="dropdown-item"
+                            href="https://qarara-aid.vercel.app/employees/{{ Auth::id() }}/reset-password">
                             <i class="bx bx-cog"></i>
 
                             تعديل كلمة المرور

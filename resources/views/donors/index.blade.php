@@ -56,7 +56,8 @@
                     <div class="d-flex justify-content-between">
                         <h4 class="card-title mg-b-0">الجهات المانحة</h4>
                         @can('donors.create')
-                            <a href="{{ route('donors.create') }}" class="btn btn-primary">إضافة جهة مانحة جديدة</a>
+                            <a href="https://qarara-aid.vercel.app/donors/create" class="btn btn-primary">إضافة جهة مانحة
+                                جديدة</a>
                         @endcan
                     </div>
 
@@ -101,7 +102,7 @@
                                         @if (auth()->user()->can('employees.create') || auth()->user()->can('employees.delete'))
                                             <td>
                                                 @can('donors.update')
-                                                    <a href="{{ route('donors.edit', $donor->id) }}"
+                                                    <a href="https://qarara-aid.vercel.app/donors/{{ $donor->id }}/edit"
                                                         class="btn btn-primary-gradient btn-sm">
                                                         تعديل
 

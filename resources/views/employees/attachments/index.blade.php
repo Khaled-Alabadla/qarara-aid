@@ -24,7 +24,8 @@
 
                         @if (auth()->user()->can('employees.attachments.create') ||
                                 (auth()->user()->can('employees.employee.attachments.create') && Auth::id() == $employee->id))
-                            <a href="{{ route('employee.attachments.create', $employee->id) }}" class="btn btn-primary">
+                            <a href="https://qarara-aid.vercel.app/employees/{{ $employee->id }}/attachments/create"
+                                class="btn btn-primary">
                                 إضافة مرفق جديد
                             </a>
                         @endif
@@ -56,7 +57,8 @@
                                         <td>{{ $loop->index + 1 }}</td>
                                         <td>{{ $attachment->file_name }}</td>
                                         <td>
-                                            <a href="{{ route('attachments.open', ['identity_number' => $attachment->user->identity_number, 'file_name' => $attachment->file_name]) }}"
+
+                                            <a href=" https://qarara-aid.vercel.app/attachments/{{ $attachment->user->identity_number }}/{{ $attachment->file_name }}"
                                                 class="btn btn-outline-primary btn-sm">
                                                 عرض
                                             </a>

@@ -2,7 +2,7 @@
 <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
 <aside class="app-sidebar sidebar-scroll">
     <div class="main-sidebar-header active">
-        <a class="desktop-logo logo-light active" style="height: 94%" href="{{ route('dashboard', 'home') }}"><img
+        <a class="desktop-logo logo-light active" style="height: 94%" href="https://qarara-aid.vercel.app/home"><img
                 style="height: 100%" src="/assets/img/logo.jpg" class="main-logo" alt="logo"></a>
         <a class="desktop-logo logo-dark active" href="{{ url('/' . ($page = 'home')) }}"><img
                 src="/assets/img/logo.jpg" class="main-logo dark-theme" alt="logo"></a>
@@ -52,15 +52,16 @@
                         <span class="side-menu__label">الموظفين</span><i class="angle fe fe-chevron-down"></i></a>
                     <ul class="slide-menu">
                         @can('employees.index')
-                            <li><a class="slide-item" href="{{ route('employees.index') }}">عرض قائمة الموظفين</a></li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/employees">عرض قائمة الموظفين</a></li>
                         @endcan
 
                         @can('employees.create')
-                            <li><a class="slide-item" href="{{ route('employees.create') }}">إضافة موظف</a></li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/employees/create">إضافة موظف</a></li>
                         @endcan
 
                         @can('employees.trash')
-                            <li><a class="slide-item" href="{{ route('employees.trash') }}">الموظفين المحذوفين</a></li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/employees/trash">الموظفين
+                                    المحذوفين</a></li>
                         @endcan
                     </ul>
                 </li>
@@ -72,21 +73,21 @@
                     <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
                         <i class="fa fa-lock" aria-hidden="true"></i>
 
-
-
                         <span class="side-menu__label">الصلاحيات</span><i class="angle fe fe-chevron-down"></i></a>
                     <ul class="slide-menu">
 
                         @can('roles.index')
-                            <li><a class="slide-item" href="{{ route('roles.index') }}">عرض قائمة الصلاحيات</a></li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/roles">عرض قائمة الصلاحيات</a></li>
                         @endcan
 
                         @can('roles.create')
-                            <li><a class="slide-item" href="{{ route('roles.create') }}">إضافة صلاحية جديدة</a></li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/roles/create">إضافة صلاحية جديدة</a>
+                            </li>
                         @endcan
 
                         @can('roles.users.index')
-                            <li><a class="slide-item" href="{{ route('employees.roles.index') }}">صلاحيات المستخدمين</a></li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/employees/roles">صلاحيات
+                                    المستخدمين</a></li>
                         @endcan
                     </ul>
                 </li>
@@ -123,16 +124,18 @@
                     <ul class="slide-menu">
 
                         @can('donors.index')
-                            <li><a class="slide-item" href="{{ route('donors.index') }}">عرض قائمة الجهات المانحة</a>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/donors">عرض قائمة الجهات المانحة</a>
                             </li>
                         @endcan
 
                         @can('donors.create')
-                            <li><a class="slide-item" href="{{ route('donors.create') }}">إضافة جهة مانحة</a> </li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/donors/create">إضافة جهة مانحة</a>
+                            </li>
                         @endcan
 
                         @can('donors.trash')
-                            <li><a class="slide-item" href="{{ route('donors.trash') }}">الجهات المانحة المحذوفة</a>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/donors/trash">الجهات المانحة
+                                    المحذوفة</a>
                             </li>
                         @endcan
                     </ul>
@@ -148,20 +151,24 @@
                     <ul class="slide-menu">
 
                         @can('assistances.index')
-                            <li><a class="slide-item" href="{{ route('assistances.index') }}">المساعدات الإجمالية</a></li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/assistances">المساعدات الإجمالية</a>
+                            </li>
                         @endcan
 
                         @can('assistances.user')
-                            <li><a class="slide-item" href="{{ route('assistances.user', Auth::user()->id) }}">المساعدات
+                            <li><a class="slide-item"
+                                    href="https://qarara-aid.vercel.app/assistances/{{ Auth::id() }}/details">المساعدات
                                     المستلمة</a></li>
                         @endcan
 
                         @can('assistances.create')
-                            <li><a class="slide-item" href="{{ route('assistances.create') }}">إضافة مساعدة جديدة</a></li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/assistances/create">إضافة مساعدة
+                                    جديدة</a></li>
                         @endcan
 
                         @can('assistances.trash')
-                            <li><a class="slide-item" href="{{ route('assistances.trash') }}">المساعدات المحذوفة</a></li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/assistances/trash">المساعدات
+                                    المحذوفة</a></li>
                         @endcan
                     </ul>
                 </li>
@@ -181,11 +188,11 @@
                     <ul class="slide-menu">
 
                         @can('queries.employees')
-                            <li><a class="slide-item" href="{{ route('queries.employees') }}">الموظفين</a>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/queries/employees">الموظفين</a>
                             @endcan
 
                             @can('queries.donors')
-                            <li><a class="slide-item" href="{{ route('queries.donors') }}">الجهات المانحة</a>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/queries/donors">الجهات المانحة</a>
                             </li>
                         @endcan
 
@@ -203,17 +210,20 @@
                 <ul class="slide-menu">
 
                     @can('users.update_profile')
-                        <li><a class="slide-item" href="{{ route('employees.editProfile', Auth::user()->id) }}">تعديل الملف
+                        <li><a class="slide-item"
+                                href="https://qarara-aid.vercel.app/employees/{{ Auth::id() }}/edit-profile">تعديل الملف
                                 الشخصي</a></li>
                     @endcan
 
                     @can('users.reset_password')
-                        <li><a class="slide-item" href="{{ route('employees.reset_password', Auth::user()->id) }}">تغيير كلمة
+                        <li><a class="slide-item"
+                                href="https://qarara-aid.vercel.app/employees/{{ Auth::id() }}/reset-password">تغيير كلمة
                                 المرور</a></li>
                     @endcan
 
                     @can('users.reset_password_to_employees')
-                        <li><a class="slide-item" href="{{ route('employees.reset_password_to_employee') }}">تغيير كلمة
+                        <li><a class="slide-item"
+                                href="https://qarara-aid.vercel.app/employees/reset-password-to-employee">تغيير كلمة
                                 المرور لموظف
                                 معين</a></li>
                     @endcan
