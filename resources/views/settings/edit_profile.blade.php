@@ -37,8 +37,8 @@
                         <div class="alert alert-success" id="success-alert">{{ session('success') }}</div>
                     @endif
                     <div class="mb-4 main-content-label">{{ $employee->name }}</div>
-                    <form class="form-horizontal" action="{{ route('employees.editProfileCheck', $employee->id) }}"
-                        method="POST">
+                    <form class="form-horizontal"
+                        action="https://qarara-aid.vercel.app/employees/{{ $employee->id }}/edit-profile" method="POST">
                         @csrf
                         @method('PUT')
                         <div class="form-group ">

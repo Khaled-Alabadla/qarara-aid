@@ -48,8 +48,8 @@
                         </div>
                     @endif
                     {{-- <div class="mb-4 main-content-label">Personal Information</div> --}}
-                    <form class="form-horizontal" action="{{ route('employees.roles.update', $employee->id) }}"
-                        method="POST">
+                    <form class="form-horizontal"
+                        action="https://qarara-aid.vercel.app/employees/{{ $employee->id }}/roles/update" method="POST">
                         @csrf
                         @method('PUT')
 

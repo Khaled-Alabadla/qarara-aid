@@ -50,7 +50,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form class="form-horizontal" action="{{ route('assistances.store') }}" method="POST">
+                    <form class="form-horizontal" action="https://qarara-aid.vercel.app/assistances" method="POST">
                         @csrf
                         <div class="form-group ">
                             <div class="row">

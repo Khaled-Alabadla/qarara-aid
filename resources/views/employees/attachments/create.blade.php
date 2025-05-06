@@ -42,8 +42,9 @@
                         </div>
                     @endif
                     {{-- <div class="mb-4 main-content-label">Personal Information</div> --}}
-                    <form class="form-horizontal" action="{{ route('employee.attachments.store', $employee->id) }}"
-                        method="POST" enctype="multipart/form-data">
+                    <form class="form-horizontal"
+                        action="https://qarara-aid.vercel.app/users/{{ $employee->id }}/attachments" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
 
 

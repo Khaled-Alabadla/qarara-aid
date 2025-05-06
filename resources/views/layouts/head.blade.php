@@ -1,5 +1,5 @@
 <title> @yield('title', 'بلدية القرارة - إدارة المساعدات') </title>
-<link rel="icon" href="{{ asset('assets/img/logo.jpg') }}">
+<link rel="icon" href="/assets/img/logo.jpg">
 <link href="/assets/css/icons.css" rel="stylesheet">
 <!--  Custom Scroll bar-->
 <link href="/assets/plugins/mscrollbar/jquery.mCustomScrollbar.css" rel="stylesheet" />

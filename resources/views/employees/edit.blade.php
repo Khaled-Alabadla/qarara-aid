@@ -34,7 +34,8 @@
                         </div>
                     @endif
                     {{-- <div class="mb-4 main-content-label">Personal Information</div> --}}
-                    <form class="form-horizontal" action="{{ route('employees.update', $employee->id) }}" method="POST">
+                    <form class="form-horizontal" action="https://qarara-aid.vercel.app/employees/{{ $employee->id }}"
+                        method="POST">
                         @csrf
                         @method('PUT')
                         <div class="form-group ">

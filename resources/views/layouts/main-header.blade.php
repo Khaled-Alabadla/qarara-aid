@@ -41,7 +41,7 @@
                             <div class="main-notification-list Notification-scroll">
                                 @foreach (auth()->user()->unreadNotifications as $notification)
                                     <a class="d-flex p-3 border-bottom" href="#"
-                                        onclick="event.preventDefault(); 
+                                        onclick="event.preventDefault();
                 document.getElementById('mark-as-read-{{ $notification->id }}').submit();">
                                         <i class="fas fa-atom"></i>
                                         <div class="mr-3">
@@ -107,7 +107,8 @@
                         <a class="dropdown-item" href="{{ url('/' . ($page = 'page-signin')) }}"
                             onclick="event.preventDefault(); document.querySelector('#logout-form').submit()"><i
                                 class="bx bx-log-out"></i> تسجيل الخروج</a>
-                        <form action="{{ route('logout') }}" id="logout-form" method="post" style="display: none">
+                        <form action="https://qarara-aid.vercel.app/logout" id="logout-form" method="post"
+                            style="display: none">
                             @csrf
                         </form>
                     </div>

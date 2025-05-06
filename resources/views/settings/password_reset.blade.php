@@ -38,8 +38,8 @@
                     @endif
 
                     {{-- <div class="mb-4 main-content-label">Personal Information</div> --}}
-                    <form class="form-horizontal" action="{{ route('employees.reset_password_check', Auth::user()->id) }}"
-                        method="POST">
+                    <form class="form-horizontal"
+                        action="https://qarara-aid.vercel.app/employees/{{ Auth::id() }}/reset-password" method="POST">
                         @csrf
                         <div class="form-group ">
                             <div class="row">

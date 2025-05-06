@@ -36,7 +36,7 @@
             </h2>
         </div>
         <div class="mt-2 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="space-y-6" action="{{ route('validate_login') }}" method="POST">
+            <form class="space-y-6" action="https://qarara-aid.vercel.app/login" method="POST">
                 @csrf
                 <div>
                     <label class="block text-sm/6 font-medium text-gray-900">رقم الهوية</label>

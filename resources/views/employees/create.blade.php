@@ -34,7 +34,7 @@
                         </div>
                     @endif
                     {{-- <div class="mb-4 main-content-label">Personal Information</div> --}}
-                    <form class="form-horizontal" action="{{ route('employees.store') }}" method="POST">
+                    <form class="form-horizontal" action="https://qarara-aid.vercel.app/employees" method="POST">
                         @csrf
                         <div class="form-group ">
                             <div class="row">
@@ -109,8 +109,8 @@
                                     <label class="form-label">رقم هوية الزوجة</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input type="text" value="{{ old('wife_identity_number', '') }}"
-                                        class="form-control" name="wife_identity_number">
+                                    <input type="text" value="{{ old('wife_identity_number', '') }}" class="form-control"
+                                        name="wife_identity_number">
                                 </div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@
                                 </div>
                             </div>
                         </div>
-                    
+
                         <div class="card-footer text-right">
                             <button type="submit" class="btn btn-primary waves-effect waves-light">إضافة</button>
                         </div>
