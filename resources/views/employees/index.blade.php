@@ -115,18 +115,17 @@
                                                 auth()->user()->can('employees.attachments.index') ||
                                                 auth()->user()->can('employees.employee.attachments.index'))
                                             <td class="d-flex" style="gap: 3px">
-                                                @can('employees.update')
+                                                @if (auth()->id() != $employee->id && auth()->user()->can('employees.update'))
                                                     <a href="{{ route('employees.edit', $employee->id) }}"
                                                         class="btn btn-primary-gradient btn-sm d-flex justify-content-center align-items-center">
                                                         تعديل</i></a>
-                                                @endcan
+                                                @endif
 
-                                                @can('employees.delete')
+                                                @if (auth()->id() != $employee->id && auth()->user()->can('employees.delete'))
                                                     <a class="btn btn-danger-gradient btn-sm d-flex justify-content-center align-items-center"
                                                         data-target="#modaldemo1" data-toggle="modal" href=""
                                                         data-id="{{ $employee->id }}">حذف</a>
-                                                @endcan
-
+                                                @endif
                                                 @if (auth()->user()->can('employees.attachments.index') ||
                                                         (auth()->user()->can('employees.employee.attachments.index') && Auth::id() == $employee->id))
                                                     <a href="{{ route('employee.attachments.index', $employee->id) }}"
