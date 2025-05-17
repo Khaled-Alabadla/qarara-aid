@@ -21,6 +21,10 @@ class AuthController extends Controller
         $request->validate([
             'identity_number' => 'required',
             'password' => 'required|min:8',
+        ], [
+            'identity_number.required' => 'رقم الهوية مطلوب',
+            'password.required' => 'كلمة المرور مطلوبة',
+            'password.min' => 'يجب أن تكون كلمة المرور 8 أحرف على الأقل',
         ]);
 
         $user = User::where('identity_number', $request->identity_number)->first();
