@@ -42,16 +42,7 @@ Try the system using the following demo credentials:
 - Notify employees when they receive aid (with type and date).
 - Improve internal communication and response time.
 
-### 6. User Settings
-- Update profile and change password easily and securely.
-
-### 7. Dashboard
-- Clean and intuitive interface with:
-  - Key Performance Indicators (KPIs)
-  - Real-time data summaries and visualizations
-  - Insights into staff activity, donations, and aid distribution
-
-### 8. Excel Export
+### 6. Excel Export
 - Export data to Excel for reporting, presentations, or records.
 
 ---
@@ -60,8 +51,7 @@ Try the system using the following demo credentials:
 
 - **Backend:** PHP Laravel  
 - **Database:** MySQL  
-- **Frontend:** RTL-friendly and responsive interface  
-- **Security:** Role-based access, strong validation, file protection
+- **Frontend:** Bootstrap, JQuery
 
 ---
 
@@ -128,26 +118,16 @@ The system aims to improve **transparency, efficiency, and accountability** in a
 - إرسال إشعارات عند استلام الموظف مساعدة مع النوع والتاريخ.
 - تحسين التواصل داخل المنظمة.
 
-### 6. الإعدادات
-- تعديل الملف الشخصي وتغيير كلمة المرور بأمان وسهولة.
-
-### 7. لوحة التحكم
-- واجهة سهلة وجذابة تحتوي على:
-  - مؤشرات الأداء الرئيسية (KPIs)
-  - ملخصات وتصورات لحظية للبيانات
-  - رؤى حول نشاط الموظفين والمساعدات والتبرعات
-
-### 8. تصدير إلى Excel
+### 6. تصدير إلى Excel
 - تصدير البيانات لتقارير أو عروض تقديمية أو حفظ السجلات.
 
 ---
 
 ## ⚙️ تقنيات النظام
 
-- **الخلفية:** PHP Laravel  
+- **الواجهات الخلفية:** PHP Laravel  
 - **قاعدة البيانات:** MySQL  
-- **الواجهة:** تدعم RTL ومتجاوبة  
-- **الأمان:** نظام صلاحيات، تحقق من البيانات، حماية للمرفقات
+- **الواجهات الأمامية:** Bootstrap, JQuery 
 
 ---
 
