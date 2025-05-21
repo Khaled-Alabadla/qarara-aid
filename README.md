@@ -1,68 +1,156 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🟦 Qarara Municipality Aid Distribution Management System
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A powerful and secure web-based aid management system developed for **Al-Qarara Municipality** using **PHP Laravel** and **MySQL** to streamline and enhance aid distribution operations. The system centralizes the management of employees, donors, beneficiaries, and aid programs with real-time reporting and a user-friendly interface.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🌟 Free Trial Credentials
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Try the system using the following demo credentials:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Identity Number:** `408120012`  
+- **Password:** `password`
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🔑 Key Features
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 1. Employee Management
+- Manage employee records and personal details.
+- Upload and manage attachments (ID cards, files, etc.).
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 2. Donor Management
+- Track donor information and their contributions.
+- Generate detailed reports on donor activities and aid impact.
 
-## Laravel Sponsors
+### 3. Aid Program Management
+- Create and manage aid types, beneficiaries, and distribution details.
+- Ensure accurate tracking and transparency in aid distribution.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 4. Roles & Permissions
+- Role-based access control system.
+- Assign specific roles and permissions to users.
 
-### Premium Partners
+### 5. Real-time Notifications
+- Notify employees when they receive aid (with type and date).
+- Improve internal communication and response time.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 6. User Settings
+- Update profile and change password easily and securely.
 
-## Contributing
+### 7. Dashboard
+- Clean and intuitive interface with:
+  - Key Performance Indicators (KPIs)
+  - Real-time data summaries and visualizations
+  - Insights into staff activity, donations, and aid distribution
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 8. Excel Export
+- Export data to Excel for reporting, presentations, or records.
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## ⚙️ Technology Stack
 
-## Security Vulnerabilities
+- **Backend:** PHP Laravel  
+- **Database:** MySQL  
+- **Frontend:** RTL-friendly and responsive interface  
+- **Security:** Role-based access, strong validation, file protection
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🎯 Project Goal
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# qarara-aid" 
-"# qarara-aid" 
+The system aims to improve **transparency, efficiency, and accountability** in aid distribution while reducing administrative overhead. It was tailored to meet the specific needs of **Al-Qarara Municipality**, ensuring organized operations and enhanced service to beneficiaries.
+
+---
+
+## 🌟 Additional Highlights
+
+- Comprehensive and clean dashboard  
+- Attachment support (upload, view, download)  
+- Robust security and validation system  
+- Full role and permission control  
+- Excel export functionality  
+- Advanced search and filtering across most pages  
+- Smooth and intuitive page navigation  
+- Dedicated reporting and inquiry sections  
+
+---
+
+# 🟩 نظام إدارة المساعدات لبلدية القرارة
+
+نظام إلكتروني متكامل وآمن تم تطويره باستخدام **PHP Laravel** وقاعدة بيانات **MySQL** لصالح **بلدية القرارة** لتنظيم وتحسين عمليات توزيع المساعدات. يعمل النظام على مركزية إدارة الموظفين والمتبرعين والمستفيدين من المساعدات مع تقارير لحظية وواجهة استخدام سهلة وعصرية.
+
+---
+
+## 🌟 بيانات تجربة مجانية
+
+يمكنك تجربة النظام باستخدام بيانات الدخول التالية:
+
+- **رقم الهوية:** `408120012`  
+- **كلمة المرور:** `password`
+
+---
+
+## 🔑 المميزات الأساسية
+
+### 1. إدارة الموظفين
+- إدارة سجلات وتفاصيل الموظفين.
+- تحميل وإدارة المرفقات مثل صور الهوية والملفات.
+
+### 2. إدارة المتبرعين
+- تتبع بيانات المتبرعين ومساهماتهم.
+- إنشاء تقارير مفصلة حول نشاطاتهم وأثر المساعدات.
+
+### 3. إدارة المساعدات
+- إنشاء وإدارة أنواع المساعدات والمستفيدين وتفاصيل التوزيع.
+- تتبع دقيق وشفاف لعمليات التوزيع.
+
+### 4. الأدوار والصلاحيات
+- نظام صلاحيات يعتمد على الأدوار.
+- تحديد الصلاحيات للمستخدمين بناءً على دورهم.
+
+### 5. الإشعارات
+- إرسال إشعارات عند استلام الموظف مساعدة مع النوع والتاريخ.
+- تحسين التواصل داخل المنظمة.
+
+### 6. الإعدادات
+- تعديل الملف الشخصي وتغيير كلمة المرور بأمان وسهولة.
+
+### 7. لوحة التحكم
+- واجهة سهلة وجذابة تحتوي على:
+  - مؤشرات الأداء الرئيسية (KPIs)
+  - ملخصات وتصورات لحظية للبيانات
+  - رؤى حول نشاط الموظفين والمساعدات والتبرعات
+
+### 8. تصدير إلى Excel
+- تصدير البيانات لتقارير أو عروض تقديمية أو حفظ السجلات.
+
+---
+
+## ⚙️ تقنيات النظام
+
+- **الخلفية:** PHP Laravel  
+- **قاعدة البيانات:** MySQL  
+- **الواجهة:** تدعم RTL ومتجاوبة  
+- **الأمان:** نظام صلاحيات، تحقق من البيانات، حماية للمرفقات
+
+---
+
+## 🎯 الهدف من المشروع
+
+يهدف النظام إلى **تعزيز الشفافية والكفاءة والمساءلة** في عملية توزيع المساعدات وتقليل الجهد الإداري. تم تصميمه خصيصًا لتلبية احتياجات **بلدية القرارة** لضمان تنظيم العمليات وتحسين الخدمات المقدمة للمستفيدين.
+
+---
+
+## 🌟 خصائص إضافية
+
+- لوحة تحكم شاملة وسهلة الاستخدام  
+- دعم رفع وعرض وتحميل المرفقات  
+- نظام تحقق وصلاحيات قوي  
+- دعم التصدير بصيغة Excel  
+- إمكانية البحث والفلترة في معظم الصفحات  
+- تنقل بين الصفحات بشكل سلس وبسيط  
+- قسم خاص بالتقارير والاستعلامات  
+
+---
