@@ -70,7 +70,7 @@
                         <table class="table table-hover  table-striped ">
                             <thead>
                                 <tr>
-                                    <th class="border-bottom-0">اسم الصلاحية</th>
+                                    <th class="border-bottom-0">اسم الدور</th>
                                     @if (auth()->user()->can('roles.update') || auth()->user()->can('roles.delete'))
                                         <th cla\ss="border-bottom-0">العمليات</th>
                                     @endif
