@@ -56,7 +56,7 @@
                     <div class="d-flex justify-content-between">
                         <h4 class="card-title mg-b-0">الصلاحيات</h4>
                         @can('roles.create')
-                            <a href="https://qarara-aid.vercel.app/roles/create" class="btn btn-primary">إضافة صلاحية جديدة</a>
+                            <a href="https://qarara-aid.vercel.app/roles/create" class="btn btn-primary">إضافة دور جديد</a>
                         @endcan
                     </div>
 

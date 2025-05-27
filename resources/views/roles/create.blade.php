@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'إضافة صلاحية جديدة')
+@section('title', 'إضافة دور جديد')
 
 @section('css')
     <!-- Internal Select2 css -->
