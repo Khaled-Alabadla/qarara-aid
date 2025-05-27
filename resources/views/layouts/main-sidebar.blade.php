@@ -81,7 +81,7 @@
                         @endcan
 
                         @can('roles.create')
-                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/roles/create">إضافة دور جديدة</a>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/roles/create">إضافة دور جديد</a>
                             </li>
                         @endcan
 
