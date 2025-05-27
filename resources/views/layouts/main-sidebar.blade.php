@@ -73,15 +73,15 @@
                     <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
                         <i class="fa fa-lock" aria-hidden="true"></i>
 
-                        <span class="side-menu__label">الصلاحيات</span><i class="angle fe fe-chevron-down"></i></a>
+                        <span class="side-menu__label">الأدوار والصلاحيات</span><i class="angle fe fe-chevron-down"></i></a>
                     <ul class="slide-menu">
 
                         @can('roles.index')
-                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/roles">عرض قائمة الصلاحيات</a></li>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/roles">عرض قائمة الأدوار</a></li>
                         @endcan
 
                         @can('roles.create')
-                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/roles/create">إضافة صلاحية جديدة</a>
+                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/roles/create">إضافة دور جديدة</a>
                             </li>
                         @endcan
 

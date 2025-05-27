@@ -23,8 +23,8 @@ class AppServiceProvider extends ServiceProvider
     {
         Carbon::setLocale('ar');
 
-        Gate::before(function($user, $ability) {
-            if($user->super_admin) {
+        Gate::before(function ($user, $ability) {
+            if ($user->super_admin) {
                 return true;
             }
         });

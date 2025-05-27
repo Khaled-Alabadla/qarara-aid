@@ -75,7 +75,7 @@
                                             <!-- Checkbox Input -->
                                             <input class="form-check-input" type="checkbox" id="{{ $ability }}"
                                                 name="abilities[{{ $ability }}] " value="{{ $ability }}"
-                                                @checked($role->abilities->contains('ability', $ability)) placeholder="الكمية">
+                                                @checked($role->abilities->contains('ability', $ability)) >
 
                                             <label class="form-check-label" for="{{ $ability }}">
                                                 {{ $ability_label }}

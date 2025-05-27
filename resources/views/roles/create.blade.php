@@ -66,6 +66,7 @@
                                 <div class="col-md-3">
                                     <label class="form-label">ما الذي يمكنه القيام به؟</label>
                                 </div>
+
                                 <div class="col-md-9">
                                     @foreach ($abilities as $ability => $ability_label)
                                         <div class="form-check d-flex align-items-center gap-3 mb-3 border-bottom pb-2"
