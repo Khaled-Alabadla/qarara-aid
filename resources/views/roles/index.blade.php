@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'عرض قائمة الصلاحيات')
+@section('title', 'عرض قائمة الأدوار')
 
 @section('css')
     <!-- Internal Data table css -->
@@ -36,8 +36,8 @@
     <div class="breadcrumb-header justify-content-between">
         <div class="my-auto">
             <div class="d-flex">
-                <h4 class="content-title mb-0 my-auto">الصلاحيات</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/
-                    قائمة الصلاحيات</span>
+                <h4 class="content-title mb-0 my-auto">الأدوار</h4><span class="text-muted mt-1 tx-13 mr-2 mb-0">/
+                    قائمة الأدوار</span>
             </div>
         </div>
 
@@ -54,7 +54,7 @@
             <div class="card mg-b-20">
                 <div class="card-header pb-0">
                     <div class="d-flex justify-content-between">
-                        <h4 class="card-title mg-b-0">الصلاحيات</h4>
+                        <h4 class="card-title mg-b-0">الأدوار</h4>
                         @can('roles.create')
                             <a href="https://qarara-aid.vercel.app/roles/create" class="btn btn-primary">إضافة دور جديد</a>
                         @endcan
@@ -113,7 +113,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content modal-content-demo">
                 <div class="modal-header">
-                    <h6 class="modal-title">حذف الصلاحية</h6><button aria-label="Close" class="close" data-dismiss="modal"
+                    <h6 class="modal-title">حذف الدور</h6><button aria-label="Close" class="close" data-dismiss="modal"
                         type="button"><span aria-hidden="true">&times;</span></button>
                 </div>
                 <div class="modal-body">
