@@ -175,7 +175,7 @@
             @endcan
 
 
-            @can('queries.display')
+            {{-- @can('queries.display')
                 <li class="side-item side-item-category">الاستعلامات والتقارير</li>
                 <li class="slide">
                     <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
@@ -199,7 +199,7 @@
                 </li>
             </ul>
             </li>
-        @endcan
+        @endcan --}}
 
         @can('settings.display')
             <li class="side-item side-item-category">الإعدادات</li>
