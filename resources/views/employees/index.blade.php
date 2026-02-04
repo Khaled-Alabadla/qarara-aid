@@ -126,134 +126,133 @@
                                                         data-target="#modaldemo1" data-toggle="modal" href=""
                                                         data-id="{{ $employee->id }}">حذف</a>
                                                 @endif
-                                                @if (auth()->user()->can('employees.attachments.index') ||
-                                                        (auth()->user()->can('employees.employee.attachments.index') && Auth::id() == $employee->id))
+                                                {{-- @if (auth()->user()->can('employees.attachments.index') || (auth()->user()->can('employees.employee.attachments.index') && Auth::id() == $employee->id))
                                                     <a href="https://qarara-aid.vercel.app/employees/{{ $employee->id }}/attachments"
                                                         class="btn btn-primary-gradient btn-sm d-flex justify-content-center align-items-center">المرفقات</i></a>
-                                                @endcan
-                                        </td>
-                                    @endif
+                                                @endcan --}}
+                                            </td>
+                                        @endif
 
-                                </tr>
-                            @endforeach
+                                    </tr>
+                                @endforeach
 
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+        <!-- /row -->
     </div>
+    <!-- Container closed -->
+    </div>
+    <div class="modal" id="modaldemo1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content modal-content-demo">
+                <div class="modal-header">
+                    <h6 class="modal-title">حذف الموظف</h6><button aria-label="Close" class="close" data-dismiss="modal"
+                        type="button"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    {{-- <h6>Modal Body</h6> --}}
+                    <p>هل أنت متأكد من عملية الحذف؟</p>
+                </div>
+                <div class="modal-footer">
+                    <form action="" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn ripple btn-danger">حفظ التغييرات</button>
+                    </form>
+                    <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">إغلاق</button>
+                </div>
 
-
-    <!-- /row -->
-</div>
-<!-- Container closed -->
-</div>
-<div class="modal" id="modaldemo1">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content modal-content-demo">
-            <div class="modal-header">
-                <h6 class="modal-title">حذف الموظف</h6><button aria-label="Close" class="close" data-dismiss="modal"
-                    type="button"><span aria-hidden="true">&times;</span></button>
             </div>
-            <div class="modal-body">
-                {{-- <h6>Modal Body</h6> --}}
-                <p>هل أنت متأكد من عملية الحذف؟</p>
-            </div>
-            <div class="modal-footer">
-                <form action="" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn ripple btn-danger">حفظ التغييرات</button>
-                </form>
-                <button class="btn ripple btn-secondary" data-dismiss="modal" type="button">إغلاق</button>
-            </div>
-
         </div>
     </div>
-</div>
-<!-- main-content closed -->
+    <!-- main-content closed -->
 @endsection
 @section('js')
-<!-- Internal Data tables -->
-<script src="/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
-<script src="/assets/plugins/datatable/js/dataTables.dataTables.min.js"></script>
-<script src="/assets/plugins/datatable/js/dataTables.responsive.min.js"></script>
-<script src="/assets/plugins/datatable/js/responsive.dataTables.min.js"></script>
-<script src="/assets/plugins/datatable/js/jquery.dataTables.js"></script>
-<script src="/assets/plugins/datatable/js/dataTables.bootstrap4.js"></script>
-<script src="/assets/plugins/datatable/js/dataTables.buttons.min.js"></script>
-<script src="/assets/plugins/datatable/js/buttons.bootstrap4.min.js"></script>
-<script src="/assets/plugins/datatable/js/jszip.min.js"></script>
-<script src="/assets/plugins/datatable/js/pdfmake.min.js"></script>
-<script src="/assets/plugins/datatable/js/vfs_fonts.js"></script>
-<script src="/assets/plugins/datatable/js/buttons.html5.min.js"></script>
-<script src="/assets/plugins/datatable/js/buttons.print.min.js"></script>
-<script src="/assets/plugins/datatable/js/buttons.colVis.min.js"></script>
-<script src="/assets/plugins/datatable/js/dataTables.responsive.min.js"></script>
-<script src="/assets/plugins/datatable/js/responsive.bootstrap4.min.js"></script>
-<script src="/assets/js/table-data.js"></script>
+    <!-- Internal Data tables -->
+    <script src="/assets/plugins/datatable/js/jquery.dataTables.min.js"></script>
+    <script src="/assets/plugins/datatable/js/dataTables.dataTables.min.js"></script>
+    <script src="/assets/plugins/datatable/js/dataTables.responsive.min.js"></script>
+    <script src="/assets/plugins/datatable/js/responsive.dataTables.min.js"></script>
+    <script src="/assets/plugins/datatable/js/jquery.dataTables.js"></script>
+    <script src="/assets/plugins/datatable/js/dataTables.bootstrap4.js"></script>
+    <script src="/assets/plugins/datatable/js/dataTables.buttons.min.js"></script>
+    <script src="/assets/plugins/datatable/js/buttons.bootstrap4.min.js"></script>
+    <script src="/assets/plugins/datatable/js/jszip.min.js"></script>
+    <script src="/assets/plugins/datatable/js/pdfmake.min.js"></script>
+    <script src="/assets/plugins/datatable/js/vfs_fonts.js"></script>
+    <script src="/assets/plugins/datatable/js/buttons.html5.min.js"></script>
+    <script src="/assets/plugins/datatable/js/buttons.print.min.js"></script>
+    <script src="/assets/plugins/datatable/js/buttons.colVis.min.js"></script>
+    <script src="/assets/plugins/datatable/js/dataTables.responsive.min.js"></script>
+    <script src="/assets/plugins/datatable/js/responsive.bootstrap4.min.js"></script>
+    <script src="/assets/js/table-data.js"></script>
 
-<script>
-    // Function to hide alert after 5 seconds
-    function hideAlert(id) {
-        setTimeout(function() {
-            let alertElement = document.getElementById(id);
-            if (alertElement) {
-                // alertElement.style.visibility='hidden';
-                alertElement.style.opacity = 0;
-                alertElement.style.maxHeight = 0;
-                alertElement.style.padding = 0;
-                alertElement.style.marginBottom = 0
-            }
-        }, 5000);
-    }
-
-    @if (session('success'))
-        hideAlert('success-alert');
-    @endif
-</script>
-<script>
-    $('#modaldemo1').on('show.bs.modal', function(event) {
-        var button = $(event.relatedTarget); // Button that triggered the modal
-        var employeeId = button.data('id'); // Extract the ID from data-* attributes
-        var modal = $(this);
-        modal.find('form').attr('action', '/employees/' + employeeId);
-    });
-</script>
-<script>
-    $(document).ready(function() {
-        // Retrieve saved page length or default to 10
-        let savedLength = parseInt(localStorage.getItem('pageLength')) || 10;
-
-        // Check if DataTable is already initialized, destroy if necessary
-        if ($.fn.DataTable.isDataTable('#example')) {
-            $('#example').DataTable().destroy(); // Destroy existing DataTable instance
+    <script>
+        // Function to hide alert after 5 seconds
+        function hideAlert(id) {
+            setTimeout(function() {
+                let alertElement = document.getElementById(id);
+                if (alertElement) {
+                    // alertElement.style.visibility='hidden';
+                    alertElement.style.opacity = 0;
+                    alertElement.style.maxHeight = 0;
+                    alertElement.style.padding = 0;
+                    alertElement.style.marginBottom = 0
+                }
+            }, 5000);
         }
 
-        // Initialize DataTable
-        let table = $('#example').DataTable({
-            pageLength: savedLength, // Default or saved page length
-            lengthMenu: [ // Define the dropdown options
-                [10, 25, 50, -1], // Values
-                [10, 25, 50, "الكل"] // Displayed options
-            ],
-            responsive: true,
-            dom: 'Bfrtip',
-            buttons: ['excel', 'colvis']
+        @if (session('success'))
+            hideAlert('success-alert');
+        @endif
+    </script>
+    <script>
+        $('#modaldemo1').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget); // Button that triggered the modal
+            var employeeId = button.data('id'); // Extract the ID from data-* attributes
+            var modal = $(this);
+            modal.find('form').attr('action', '/employees/' + employeeId);
         });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Retrieve saved page length or default to 10
+            let savedLength = parseInt(localStorage.getItem('pageLength')) || 10;
 
-        // Set the default dropdown value
-        $('#pageLength').val(savedLength);
+            // Check if DataTable is already initialized, destroy if necessary
+            if ($.fn.DataTable.isDataTable('#example')) {
+                $('#example').DataTable().destroy(); // Destroy existing DataTable instance
+            }
 
-        // Update DataTable and save user preference on dropdown change
-        $('#pageLength').on('change', function() {
-            let length = parseInt($(this).val(), 10) || 10; // Ensure valid integer
-            table.page.len(length === -1 ? table.data().length : length).draw(); // Handle "all rows"
-            localStorage.setItem('pageLength', length); // Save preference
+            // Initialize DataTable
+            let table = $('#example').DataTable({
+                pageLength: savedLength, // Default or saved page length
+                lengthMenu: [ // Define the dropdown options
+                    [10, 25, 50, -1], // Values
+                    [10, 25, 50, "الكل"] // Displayed options
+                ],
+                responsive: true,
+                dom: 'Bfrtip',
+                buttons: ['excel', 'colvis']
+            });
+
+            // Set the default dropdown value
+            $('#pageLength').val(savedLength);
+
+            // Update DataTable and save user preference on dropdown change
+            $('#pageLength').on('change', function() {
+                let length = parseInt($(this).val(), 10) || 10; // Ensure valid integer
+                table.page.len(length === -1 ? table.data().length : length).draw(); // Handle "all rows"
+                localStorage.setItem('pageLength', length); // Save preference
+            });
         });
-    });
-</script>
+    </script>
 
 
 @endsection
