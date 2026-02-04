@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('type');
             $table->integer('quantity');
-            $table->foreignId('donor_id');
+            $table->foreignId('donor_id')->constrained('donors')->cascadeOnDelete();
             $table->date('date');
             $table->text('notes')->nullable();
             $table->timestamps();
