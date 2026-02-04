@@ -87,12 +87,6 @@
                     </button>
                 </form>
             </div>
-
-            <div class="mt-10 flex justify-center gap-4 text-sm text-gray-400">
-                <a href="#" class="hover:text-indigo-600 transition-colors">هل نسيت كلمة المرور؟</a>
-                <span>•</span>
-                <a href="#" class="hover:text-indigo-600 transition-colors">الدعم الفني</a>
-            </div>
         </div>
     </div>
 
