@@ -29,49 +29,70 @@
   <body class="h-full">
   ```
 -->
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img class="mx-auto w-[250px]" src="/assets/img/logo.jpg" alt="Your Company">
-            <h2 class="mt-3 text-center text-2xl/9 font-bold tracking-tight text-gray-900">الدخول إلى حسابك الخاص
-            </h2>
-        </div>
-        <div class="mt-2 sm:mx-auto sm:w-full sm:max-w-sm">
-            <form class="space-y-6" action="https://qarara-aid.vercel.app/login" method="POST">
-                @csrf
-                <div>
-                    <label class="block text-sm/6 font-medium text-gray-900">رقم الهوية</label>
-                    <div class="mt-2">
-                        {{-- {{ dd(old('identity_number')) }} --}}
+    <div class="flex min-h-screen flex-col justify-center bg-[#f8fafc] px-6 py-12 lg:px-8" dir="rtl">
+        <div class="sm:mx-auto sm:w-full sm:max-w-md">
+            <div
+                class="relative overflow-hidden bg-white px-8 py-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-3xl border border-gray-100">
+                <div class="absolute top-0 right-0 left-0 h-1.5 bg-indigo-600"></div>
 
-                        <input type="text" autocomplete="identity_number" value="{{ old('identity_number', '') }}"
-                            name="identity_number" id="identity" required
-                            class="block w-full rounded-md bg-white px-3 py-1.5 border-2 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                <div class="sm:mx-auto sm:w-full sm:max-w-sm text-center">
+                    <div class="inline-block p-3 rounded-2xl bg-gray-50 mb-4">
+                        <img class="w-32 h-auto" src="/assets/img/logo.jpg" alt="Logo">
+                    </div>
+                    <h2 class="text-2xl font-black text-gray-900">أهلاً بك مجدداً</h2>
+                    <p class="mt-2 text-sm text-gray-500 mb-8 font-medium">الرجاء إدخال بياناتك للوصول للوحة التحكم</p>
+                </div>
+
+                <form class="space-y-6" action="https://qarara-aid.vercel.app/login" method="POST">
+                    @csrf
+
+                    <div>
+                        <label for="identity"
+                            class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 mr-1">رقم
+                            الهوية</label>
+                        <input type="text" name="identity_number" id="identity" inputmode="numeric" pattern="[0-9]*"
+                            autocomplete="identity_number" value="{{ old('identity_number', '') }}" required
+                            class="block w-full rounded-2xl border-0 bg-gray-100/50 px-4 py-4 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm transition-all outline-none"
+                            placeholder="000000000">
                         @error('identity_number')
-                            <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                            <div class="flex items-center gap-1 mt-2 mr-1 text-red-500">
+                                <span class="text-xs font-bold">{{ $message }}</span>
+                            </div>
                         @enderror
                     </div>
-                </div>
 
-                <div>
-                    <div class="flex items-center justify-between">
-                        <label for="password" autocomplete="password"
-                            class="block text-sm/6 font-medium text-gray-900">كلمة المرور</label>
-
-                    </div>
-                    <div class="mt-2">
-                        <input type="password" value="" autocomplete="off" name="password" id="password" required
-                            class="block w-full rounded-md border-2 bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                    <div>
+                        <label for="password"
+                            class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 mr-1">كلمة
+                            المرور</label>
+                        <input type="password" name="password" id="password" required
+                            class="block w-full rounded-2xl border-0 bg-gray-100/50 px-4 py-4 text-gray-900 ring-1 ring-inset ring-gray-200 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm transition-all outline-none"
+                            placeholder="••••••••">
                         @error('password')
-                            <p class="text-red-600 text-sm mt-1">{{ $message }}</p>
+                            <div class="flex items-center gap-1 mt-2 mr-1 text-red-500">
+                                <span class="text-xs font-bold">{{ $message }}</span>
+                            </div>
                         @enderror
                     </div>
-                </div>
-                <div>
+
                     <button type="submit"
-                        class="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">تسجيل
-                        الدخول</button>
-                </div>
-            </form>
+                        class="group relative flex w-full justify-center rounded-2xl bg-indigo-600 px-4 py-4 text-sm font-bold text-white transition-all hover:bg-indigo-700 hover:-translate-y-0.5 active:translate-y-0 shadow-lg shadow-indigo-100">
+                        <span>تسجيل الدخول</span>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5 mr-2 opacity-0 -translate-x-2 transition-all group-hover:opacity-100 group-hover:translate-x-0"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 16l-4-4m0 0l4-4m-4 4h14" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="mt-10 flex justify-center gap-4 text-sm text-gray-400">
+                <a href="#" class="hover:text-indigo-600 transition-colors">هل نسيت كلمة المرور؟</a>
+                <span>•</span>
+                <a href="#" class="hover:text-indigo-600 transition-colors">الدعم الفني</a>
+            </div>
         </div>
     </div>
 
