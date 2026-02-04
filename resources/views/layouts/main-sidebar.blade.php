@@ -175,61 +175,37 @@
             @endcan
 
 
-            {{-- @can('queries.display')
-                <li class="side-item side-item-category">الاستعلامات والتقارير</li>
+            @can('settings.display')
+                <li class="side-item side-item-category">الإعدادات</li>
                 <li class="slide">
                     <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
-                        <i class="fa-solid fa-question"></i>
-
-
-
-                        <span class="side-menu__label">الاستعلامات والتقارير</span><i
-                            class="angle fe fe-chevron-down"></i></a>
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        <span class="side-menu__label">الإعدادات</span><i class="angle fe fe-chevron-down"></i></a>
                     <ul class="slide-menu">
 
-                        @can('queries.employees')
-                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/queries/employees">الموظفين</a>
-                            @endcan
-
-                            @can('queries.donors')
-                            <li><a class="slide-item" href="https://qarara-aid.vercel.app/queries/donors">الجهات المانحة</a>
-                            </li>
+                        @can('users.update_profile')
+                            <li><a class="slide-item"
+                                    href="https://qarara-aid.vercel.app/employees/{{ Auth::id() }}/edit-profile">تعديل
+                                    الملف
+                                    الشخصي</a></li>
                         @endcan
 
+                        @can('users.reset_password')
+                            <li><a class="slide-item"
+                                    href="https://qarara-aid.vercel.app/employees/{{ Auth::id() }}/reset-password">تغيير
+                                    كلمة
+                                    المرور</a></li>
+                        @endcan
+
+                        @can('users.reset_password_to_employees')
+                            <li><a class="slide-item"
+                                    href="https://qarara-aid.vercel.app/employees/reset-password-to-employee">تغيير كلمة
+                                    المرور لموظف
+                                    معين</a></li>
+                        @endcan
+                    </ul>
                 </li>
-            </ul>
-            </li>
-        @endcan --}}
-
-        @can('settings.display')
-            <li class="side-item side-item-category">الإعدادات</li>
-            <li class="slide">
-                <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . ($page = '#')) }}">
-                    <i class="fa fa-cog" aria-hidden="true"></i>
-                    <span class="side-menu__label">الإعدادات</span><i class="angle fe fe-chevron-down"></i></a>
-                <ul class="slide-menu">
-
-                    @can('users.update_profile')
-                        <li><a class="slide-item"
-                                href="https://qarara-aid.vercel.app/employees/{{ Auth::id() }}/edit-profile">تعديل الملف
-                                الشخصي</a></li>
-                    @endcan
-
-                    @can('users.reset_password')
-                        <li><a class="slide-item"
-                                href="https://qarara-aid.vercel.app/employees/{{ Auth::id() }}/reset-password">تغيير كلمة
-                                المرور</a></li>
-                    @endcan
-
-                    @can('users.reset_password_to_employees')
-                        <li><a class="slide-item"
-                                href="https://qarara-aid.vercel.app/employees/reset-password-to-employee">تغيير كلمة
-                                المرور لموظف
-                                معين</a></li>
-                    @endcan
-                </ul>
-            </li>
-        @endcan
+            @endcan
         </ul>
     </div>
 </aside>
